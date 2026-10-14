@@ -1,0 +1,8 @@
+# Toda mudança precisa de revisão do dono do repositório.
+* @kyomeii
+
+# Carteiras de doação, URL e contato: só mude se o dono pediu.
+/src/config.mjs @kyomeii
+/public/_headers @kyomeii
+/wrangler.jsonc @kyomeii
+/package.json @kyomeii

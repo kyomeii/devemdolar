@@ -16,7 +16,13 @@ Aquí nos vamos a enfocar solo en el currículum.
 
 Olvídate de todos esos currículums con colores, foto, elementos visuales, etc. El currículum para tech es **solo contenido**, y tiene que pasar el ATS (*Applicant Tracking System*, el robot que lee tu currículum antes que cualquier humano).
 
-Yo usaba resumake.io, que era solo una interfaz que compilaba el currículum en LaTeX con unos diseños predefinidos. Recomiendo muchísimo usar **LaTeX o Markdown** para generar el PDF del currículum, pero por ahora enfoquémonos en el contenido.
+Yo usaba resumake.io, que era solo una interfaz que compilaba el currículum en LaTeX con unos diseños predefinidos. Hoy recomiendo escribirlo en **Markdown** y generar el PDF a partir de ahí. Al ATS le da igual si viene de LaTeX, Markdown o Word: lo que importa es que el PDF final tenga **texto de verdad** (que lo puedas seleccionar y copiar), **una sola columna** y una fuente estándar. Markdown simplemente es mucho más fácil de editar, y la Skill de más abajo te genera el PDF.
+
+Así queda (todo inventado, obvio, Joana no existe):
+
+![Ejemplo completo de currículum en formato gringo](../../../assets/resume/cv-full.png)
+
+Ahora vamos por partes.
 
 ## Estructura
 
@@ -24,13 +30,19 @@ Yo usaba resumake.io, que era solo una interfaz que compilaba el currículum en 
 
 Nombre, número de teléfono (con el código de tu país, tipo +52, +57, +54), e-mail y portafolio/GitHub si tienes. Nada más. Sin dirección, sin estado civil, sin foto, sin fecha de nacimiento, nada.
 
+![Ejemplo de encabezado: nombre, teléfono, e-mail, LinkedIn y GitHub](../../../assets/resume/cv-header.png)
+
 ### Título y resumen
 
 El título es tu puesto. En el caso del mío actual, uso *Analytics Engineer*. Después, un breve resumen profesional de lo que haces, dos o tres líneas.
 
+![Ejemplo de título y resumen](../../../assets/resume/cv-summary.png)
+
 ### Experiencia
 
 Separada por empresa, siempre con tu **último título** dentro de esa empresa. Pon también el periodo que estuviste.
+
+![Ejemplo de una experiencia: puesto, empresa, periodo y bullets con métrica](../../../assets/resume/cv-experience.png)
 
 Cada herramienta que quieras resaltar debe tener su propio bullet point, y si se puede, una **métrica** amarrada a ese bullet point. **AUNQUE NO LA HAYAS MEDIDO, SÁCATELA DE LA MANGA (O DEL CULO), PERO PON UNA MÉTRICA.**
 
@@ -50,13 +62,17 @@ Este segundo es mucho más fácil de medir, pero también vale la pena exagerarl
 
 Después de las experiencias, pon tus skills separadas por temas (lenguajes, herramientas, cloud, etc.). Nada de soft skills, tipo liderazgo, proactividad, etc. Esas babosadas solo les gustan a los jefes latinos.
 
+![Ejemplo de la sección de skills, separada por categoría](../../../assets/resume/cv-skills.png)
+
 ### Educación
 
 Al final, tu educación. Dependiendo del peso de tu educación, puedes ponerla antes. Si me hubiera graduado del MIT, ese dato iría justo después del resumen.
 
+![Ejemplo de la sección de educación](../../../assets/resume/cv-education.png)
+
 ## Cómo crear el currículum
 
-Dejé en el repositorio una **Skill de Claude** para ayudarles con esto (carpeta `skills/curriculo-gringa` en el [repositorio de GitHub](/es/contribute/)). Sigue todo lo que está en esta página: hace las preguntas correctas, convierte tus experiencias en bullet points con métrica, y te escupe un currículum en LaTeX o Markdown listo para convertir en PDF. El mismo Claude te ayuda a configurarla sin broncas.
+Dejé en el repositorio una **Skill de Claude** para ayudarles con esto ([carpeta `skills/curriculo-gringa`](https://github.com/kyomeii/devemdolar/tree/main/skills/curriculo-gringa)). Sigue todo lo que está en esta página: hace las preguntas correctas, convierte tus experiencias en bullet points con métrica, escribe el currículum en Markdown y te escupe el PDF listo, igualito al ejemplo de arriba. El mismo Claude te ayuda a configurarla sin broncas.
 
 ## Sobre mentir en el currículum
 

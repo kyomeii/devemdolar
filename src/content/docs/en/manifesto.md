@@ -19,6 +19,8 @@ For background, I've been working for foreign companies since May 2024. Here's m
 6. I was unemployed for three months, then landed another **5k USD/month** contract at another startup, which is my best job so far.
 7. I got another contract two months later, a bit smaller this time (**3k USD/month**).
 
+I'm sure there are plenty of people way more qualified than me to talk about this, and that's exactly why this platform is open for everyone to share.
+
 ## Why this site exists
 
 My idea with this site is to collect stories from other people with a background similar to mine to help others, and to **fuck over the course-sellers and "mentors"** who charge an absurd amount for content you can find for free on the internet.

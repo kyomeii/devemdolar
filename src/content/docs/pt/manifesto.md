@@ -3,7 +3,7 @@ title: Manifesto
 description: Por que esse site existe, quem sou eu, e por que você não precisa pagar mentoria nenhuma.
 ---
 
-Estou criando esse site colaborativo para ajudar outros desenvolvedores a conseguir fugir desse *hellhole* que é ganhar em shitcoin (Real), e conseguir conquistar a liberdade financeira.
+Estou criando esse site colaborativo para ajudar outros desenvolvedores a conseguir fugir desse *hellhole* que é ganhar em shitcoin (vulgo Real brasileiro), e conseguir conquistar a liberdade financeira.
 
 Esse conteúdo é focado para profissionais que **já têm experiência na área de tecnologia**. Se você não tem, sinto muito, $20 de Claude vale mais do que o seu salário.
 
@@ -18,6 +18,8 @@ Como background, trabalho pra gringa desde maio de 2024. Minha trajetória de ca
 5. Assim fiquei, ganhando um total de **10k USD/mês** durante um ano e um mês, quando fui de Vasco nas duas, com duas semanas de distância uma da outra.
 6. Fiquei três meses desempregado, e consegui um outro contrato de **5k USD/mês**, em outra startup, que é o meu melhor emprego até agora.
 7. Consegui outro contrato dois meses depois, dessa vez um pouco menor (**3k USD/mês**).
+
+Tenho certeza de que tem muitos outros que são muito mais qualificados do que eu pra falar sobre esse assunto, e justamente por isso essa plataforma é aberta para compartilhamentos.
 
 ## Por que esse site existe
 

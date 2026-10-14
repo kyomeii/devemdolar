@@ -19,6 +19,8 @@ Almost every foreign contract is as a **contractor** (service provider), so you'
 
 Look for an **accounting firm that specializes in people who export services**. There are plenty online that already do this on autopilot, and they charge a few hundred reais a month. Worth every penny.
 
+Sounds like a lot, but relax: I barely worried about any of this myself. I did everything through **Contabilizei** (a Brazilian online accounting firm), and they handled the whole process. Here and there I had to do something, but nothing too complicated.
+
 ### How the money gets to you
 
 There are two main ways:
@@ -27,6 +29,8 @@ There are two main ways:
 2. **Direct invoice:** you send the invoice to the company every month and they transfer it to your international account.
 
 To receive, the most common options are **Wise, Payoneer, Husky (now owned by Nomad), Inter (global account), Nomad, and Avenue**. What matters is the **spread** (the difference between the exchange rate they give you and the commercial rate) and the fixed fees. Seems like nothing, but a 1% difference on 5k dollars is 50 dollars **every month**, 600 a year. Compare.
+
+I recommend **[Wise](https://wise.com)**. You get a USD account in your name, they convert at the commercial rate with a fee shown right in your face before you confirm, and the money lands in your company's account with no surprises.
 
 > **Not Brazilian?** The spirit is the same: figure out your country's self-employed/simplified company regime (monotributo in Argentina, RESICO in Mexico, régimen simple in Colombia, boleta de honorarios in Chile) and find an accountant who already works with people working for foreign companies.
 
@@ -45,7 +49,9 @@ So:
 
 Remote work lives and dies by communication. The guy who delivers little but communicates well lasts longer than the genius who disappears. Ideally, you deliver well **and** communicate well.
 
-- **Over-communicate.** Nobody can see you. If you don't say what you're doing, as far as your manager is concerned, you're doing nothing.
+- **Communicate all the time.** Nobody can see you. If you don't say what you're doing, as far as your manager is concerned, you're doing nothing.
+- **But skip the essay.** Americans don't want extra context. None of that "I finished the task, but there was an issue that led to another one, so I had to touch this other thing, blah blah blah." Just: **"I've completed this task."** If they want more, they'll ask. Context only goes in when it changes something for the reader (it's late, it needs a decision, it broke something else).
+- **Take the credit.** Americans love it, and they expect you to do it too. It's **"I did this,"** not "the team did this." Brazilians have a habit of diluting their own work into "we," and then nobody knows it was you.
 - **Don't just send "hi".** Send "Hi, so-and-so, I've got a problem with the X deploy, already tried Y and Z, can you help me?" all at once. Foreigners hate a "Hi" followed by waiting for a reply. There's even a website about it: [nohello.net](https://nohello.net).
 - **Write updates.** At the end of the day (or week), send a summary of what you did, what you're going to do, and what's blocking you. Your manager will love it, and it becomes proof of your work when review time comes.
 - **Ask in public channels, not in DMs.** That way more people can help, and the answer is on record for the next person.
@@ -94,6 +100,7 @@ I've had two contracts at the same time, and I do again. I'm not going to preten
 - **Separate everything:** computer, accounts, email, browser. Never use one job's equipment for the other's work.
 - **Manage your calendar** like your life depends on it. Block time on both calendars.
 - **Keep your mouth shut.** Don't tell coworkers, don't post about it on LinkedIn.
+- **Don't update your LinkedIn.** I don't update mine unless it's absolutely necessary (like when I'm unemployed). If they ask you to update it, pretend you didn't see it. If they insist, then there's no way around it, that's the risk you take.
 
 ## When it ends
 
@@ -101,6 +108,6 @@ Because it will end, sooner or later:
 
 - **Don't burn bridges.** Leave on good terms, hand over properly, say thanks. The world is small, and a lot of people who worked with you will refer you in the future.
 - **Ask for LinkedIn recommendations** while everyone still remembers you.
-- **Never fully stop job hunting.** Even when employed, keep your LinkedIn active, take calls with recruiters, do an interview every now and then. That way, when the Friday email arrives, you already have somewhere to start.
+- **Never fully stop job hunting.** Even when employed, keep adding people on LinkedIn, take calls with recruiters, do an interview every now and then. That way, when the Friday email arrives, you already have somewhere to start.
 
 And when you're on the other side, earning in a strong currency, come back here and **write your story**. That's how this site gets better.

@@ -223,3 +223,14 @@ h1#_top {
 	margin: 0;
 	max-width: 46rem;
 }
+
+/* Imagens de exemplo de currículo: "papel" com borda e sombra */
+.sl-markdown-content img[src*='cv-'] {
+	display: block;
+	width: 100%;
+	height: auto;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.5rem;
+	box-shadow: 0 12px 30px -18px var(--gringa-shadow);
+	background: #fff;
+}

@@ -3,7 +3,7 @@ title: Manifiesto
 description: Por qué existe este sitio, quién soy yo, y por qué no necesitas pagar ninguna mentoría.
 ---
 
-Estoy creando este sitio colaborativo para ayudar a otros desarrolladores a escapar de este *hellhole* que es cobrar en shitcoin (el real, el peso, la moneda local que sea), y lograr la libertad financiera.
+Estoy creando este sitio colaborativo para ayudar a otros desarrolladores a escapar de este *hellhole* que es cobrar en shitcoin (o sea, el real brasileño; y tu peso tampoco se salva), y lograr la libertad financiera.
 
 Este contenido está pensado para profesionales que **ya tienen experiencia en tecnología**. Si no la tienes, lo siento, $20 de Claude valen más que tu salario.
 
@@ -18,6 +18,8 @@ De contexto: trabajo para el extranjero desde mayo de 2024. Soy brasileño y mi 
 5. Así me quedé, ganando un total de **10k USD/mes** durante un año y un mes, hasta que me mandaron a la goma de los dos, con dos semanas de diferencia entre uno y otro.
 6. Estuve tres meses desempleado, y conseguí otro contrato de **5k USD/mes**, en otra startup, que es mi mejor trabajo hasta ahora.
 7. Conseguí otro contrato dos meses después, esta vez un poco menor (**3k USD/mes**).
+
+Estoy seguro de que hay muchos otros mucho más calificados que yo para hablar de este tema, y justamente por eso esta plataforma está abierta para que todos compartan.
 
 ## Por qué existe este sitio
 

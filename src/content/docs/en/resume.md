@@ -16,7 +16,13 @@ Here we'll focus on the resume only.
 
 Forget all those resumes with colors, photos, visual elements, etc. A tech resume is **content only**, and it has to get past the ATS (*Applicant Tracking System*, the robot that reads your resume before any human does).
 
-I used resumake.io, which was just an interface that compiled your resume in LaTeX with a few predefined layouts. I strongly recommend using **LaTeX or Markdown** to generate your resume PDFs, but for now let's focus on the content.
+I used resumake.io, which was just an interface that compiled your resume in LaTeX with a few predefined layouts. These days I recommend writing it in **Markdown** and generating the PDF from that. The ATS doesn't care whether it came from LaTeX, Markdown or Word: what matters is that the final PDF has **real text** (you can select and copy it), **a single column** and a standard font. Markdown is just way easier to edit, and the Skill further down generates the PDF for you.
+
+This is what it looks like (all made up, obviously, Joana doesn't exist):
+
+![Full example of a resume in the international format](../../../assets/resume/cv-full.png)
+
+Now let's go piece by piece.
 
 ## Structure
 
@@ -24,13 +30,19 @@ I used resumake.io, which was just an interface that compiled your resume in LaT
 
 Name, phone number (with +55, or your country code), email, and portfolio/GitHub if you have one. Nothing else. No address, no marital status, no photo, no date of birth, nothing.
 
+![Example header: name, phone, e-mail, LinkedIn and GitHub](../../../assets/resume/cv-header.png)
+
 ### Title and summary
 
 The title is your job title. In my current case, I use *Analytics Engineer*. Then a short professional summary of what you do, two or three lines.
 
+![Example title and summary](../../../assets/resume/cv-summary.png)
+
 ### Experience
 
 Split by company, always with your **latest title** at that company. Put the period you were there too.
+
+![Example job entry: title, company, dates and bullets with metrics](../../../assets/resume/cv-experience.png)
 
 Each tool you want to highlight should get its own bullet point, and if possible a **metric** attached to that bullet point. **EVEN IF YOU NEVER MEASURED IT, PULL IT OUT OF YOUR ASS, BUT PUT A METRIC THERE.**
 
@@ -50,13 +62,17 @@ This second one is much easier to measure, but it's worth exaggerating a bit too
 
 After your experience, list your skills split into categories (languages, tools, cloud, etc.). No soft skills, like leadership, proactivity, etc. The only people who like that crap are Brazilian managers.
 
+![Example skills section, grouped by category](../../../assets/resume/cv-skills.png)
+
 ### Education
 
 Last, your education. Depending on how much weight your education carries, you can put it earlier. If I'd graduated from MIT, that would go right after the summary.
 
+![Example education section](../../../assets/resume/cv-education.png)
+
 ## How to create the resume
 
-I left a **Claude Skill** in the repository to help you with this (the `skills/curriculo-gringa` folder in the [GitHub repository](/en/contribute/)). It follows everything on this page: asks the right questions, turns your experience into bullet points with metrics, and spits out a resume in LaTeX or Markdown ready to become a PDF. Claude itself will walk you through setting it up.
+I left a **Claude Skill** in the repository to help you with this ([the `skills/curriculo-gringa` folder](https://github.com/kyomeii/devemdolar/tree/main/skills/curriculo-gringa)). It follows everything on this page: asks the right questions, turns your experience into bullet points with metrics, writes the resume in Markdown and spits out the finished PDF, just like the example above. Claude itself will walk you through setting it up.
 
 ## About lying on your resume
 

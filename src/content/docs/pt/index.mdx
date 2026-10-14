@@ -4,7 +4,7 @@ description: Guia gratuito, open source e sem papo de coach pra profissional de 
 template: splash
 hero:
   title: Pare de ganhar em <em>shitcoin</em>.
-  tagline: O guia gratuito, open source e sem papo de coach pra profissional de tecnologia brasileiro trabalhar remoto pra gringa, ganhando em dólar ou euro.
+  tagline: <strong>Shitcoin = Real brasileiro.</strong> O guia gratuito, open source e sem papo de coach pra profissional de tecnologia brasileiro trabalhar remoto pra gringa, ganhando em dólar ou euro.
   image:
     html: '<img src="/hero.webp" width="1168" height="880" alt="Ilustração de um dev trabalhando no notebook à noite, com vista pro Pão de Açúcar, e um aviãozinho de papel feito de nota de dólar voando pela janela." />'
   actions:
@@ -18,13 +18,12 @@ hero:
 ---
 
 import ChapterGrid from '../../../components/ChapterGrid.astro';
-import Converter from '../../../components/Converter.astro';
+import CltPj from '../../../components/CltPj.astro';
 
 <div class="home-stats not-content">
 	<div><strong>US$ 10k</strong><span>por mês, o que eu cheguei a ganhar com dois contratos</span></div>
-	<div><strong>R$ 0</strong><span>o custo desse guia. E de qualquer mentoria que você não deveria comprar</span></div>
+	<div><strong>R$ 0</strong><span>o custo desse guia.</span></div>
 	<div><strong>8</strong><span>capítulos, do inglês até não fazer merda no trabalho</span></div>
-	<div><strong>3</strong><span>idiomas, mantido pela comunidade</span></div>
 </div>
 
 <section class="home-section not-content">
@@ -38,7 +37,7 @@ import Converter from '../../../components/Converter.astro';
 			{ slug: 'technical', title: 'Técnica', desc: 'Domine sua stack. O que importa na era da IA, e os livros.' },
 			{ slug: 'resume', title: 'Currículo', desc: 'Passe no ATS, coloque métrica em tudo, minta com consciência.' },
 			{ slug: 'linkedin', title: 'LinkedIn', desc: 'Conexões, LIONs, 500+ e o algoritmo trabalhando pra você.' },
-			{ slug: 'job-hunting', title: 'Procurar vagas', desc: 'Pesquisa booleana, Posts, site: no Google e HiringCafe.' },
+			{ slug: 'job-hunting', title: 'Procurar vagas', desc: 'Onde você vai achar sua vaga.' },
 			{ slug: 'interview', title: 'Entrevista', desc: 'STAR, live coding, salário em dólar, e os golpes.' },
 			{ slug: 'on-the-job', title: 'No trabalho', desc: 'CNPJ, impostos, câmbio, fuso, e como não ser demitido.' },
 		]}
@@ -46,15 +45,7 @@ import Converter from '../../../components/Converter.astro';
 </section>
 
 <section class="home-section not-content">
-	<Converter
-		locale="pt-BR"
-		title="Quanto você tá deixando na mesa?"
-		inputLabel="Seu salário bruto mensal hoje"
-		yourSalary="Seu salário, em dólar"
-		contractLabel="Um contrato gringo comum (US$ 5k/mês), na sua moeda"
-		multiplierLabel="Quantas vezes mais"
-		rateLabel="Câmbio de hoje:"
-	/>
+	<CltPj lang="pt" />
 </section>
 
 <section class="home-section not-content">

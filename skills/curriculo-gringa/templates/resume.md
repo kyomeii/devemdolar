@@ -1,33 +1,32 @@
-# Your Name
+# Joana Exemplo da Silva
++55 11 90000-0000 • joana.exemplo@email.com • linkedin.com/in/joana-exemplo • github.com/joana-exemplo
 
-+55 11 90000-0000 | you@email.com | [linkedin.com/in/you](https://linkedin.com/in/you) | [github.com/you](https://github.com/you)
+## Senior Backend Engineer
+Backend Engineer with 7+ years of experience building payment, logistics and internal platform services for US startups and Brazilian enterprises. Specialized in Node.js/TypeScript and Go microservices, event-driven architectures on AWS, and PostgreSQL performance tuning. Comfortable owning services end to end, from system design to on-call, and working directly with product and business stakeholders in fully remote, async teams.
 
-## Analytics Engineer
+## Work Experience
 
-Analytics Engineer with 6 years of experience building data models, pipelines and BI solutions for US and Brazilian companies. Specialized in turning messy data into reliable, self-service analytics with Power BI, SQL, dbt and Snowflake.
+### Senior Backend Engineer • Contractor | Acme Fintech | Mar 2024 - Present
+- (Payments Platform) Designed and shipped an idempotent payments API in TypeScript handling 2M+ transactions per month with 99.98% uptime.
+- Migrated a monolithic billing service to 6 event-driven microservices on AWS (SQS, Lambda, ECS), cutting deploy time from 45 minutes to 6 minutes.
+- Reduced p95 API latency from 850 ms to 120 ms by redesigning PostgreSQL indexes and introducing a Redis caching layer.
+- Led the adoption of OpenTelemetry tracing across 14 services, reducing mean time to resolution of incidents by 40%.
 
-## Experience
+### Backend Engineer | Globex Logistics | Jan 2021 - Feb 2024
+- Built a route-optimization service in Go that processed 50K+ deliveries per day, reducing average delivery cost by 11%.
+- Implemented a Kafka-based event pipeline replacing nightly batch jobs, making shipment status updates available in real time.
+- Automated infrastructure provisioning with Terraform, bringing new environment setup from 2 days to 30 minutes.
 
-**Company Name** — Analytics Engineer  
-Remote · Mar 2024 – Present
-
-- Built 12 Power BI dashboards on sales and churn used daily by 40+ managers, cutting ad-hoc report requests by 60%.
-- Optimized a Databricks pipeline from 67 to 5 minutes of runtime, reducing cloud cost per run from $420 to $10.
-- Modeled a dimensional data warehouse in Snowflake with dbt, consolidating 9 sources into a single source of truth.
-
-**Previous Company** — Data Analyst  
-São Paulo, Brazil · Jan 2021 – Feb 2024
-
-- Automated monthly financial reporting with Python and SQL, saving 30 hours of manual work per month.
-- Led the migration of 50+ Excel reports to Power BI, adopted by 5 business units.
+### Software Developer | Initech Consultoria | Jun 2018 - Dec 2020
+- Developed REST APIs in Java/Spring Boot for 4 enterprise clients in retail and insurance.
+- Optimized slow SQL queries in a legacy ERP integration, reducing a monthly reconciliation job from 9 hours to 40 minutes.
+- Containerized 12 legacy applications with Docker, standardizing local development and CI pipelines.
 
 ## Skills
-
-- **Languages:** SQL, Python, DAX
-- **Data:** dbt, Snowflake, Databricks, Spark, Data Modeling (Kimball)
-- **BI:** Power BI, Tableau
-- **Tools:** Git, Airflow, Azure DevOps
+- **Languages:** TypeScript, Node.js, Go, Java, SQL
+- **Cloud & Infra:** AWS (Lambda, ECS, SQS, RDS), Terraform, Docker, GitHub Actions
+- **Data & Messaging:** PostgreSQL, Redis, Kafka, DynamoDB
+- **Languages (spoken):** Portuguese (Native), English (Fluent), Spanish (Intermediate)
 
 ## Education
-
-**University Name** — B.Sc. in Mechanical Engineering, 2015 – 2020
+### Bachelor's in Computer Science | Universidade Federal do Exemplo | Dec 2018

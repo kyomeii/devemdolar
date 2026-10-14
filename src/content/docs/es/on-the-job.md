@@ -23,6 +23,8 @@ Casi todo contrato para afuera es como **contractor** (prestador de servicios), 
 
 Busca una **contabilidad especializada en exportación de servicios**. Hay varias en línea que ya lo hacen en automático, y cobran unos cuantos cientos de reales al mes. Vale cada centavo.
 
+Parece mucho, pero tranqui: yo mismo casi ni me preocupé por esto. Hice todo con **Contabilizei** (una contabilidad en línea brasileña), y ellos se encargaron de todo el proceso. Una que otra cosa tuve que hacer yo, pero nada demasiado complicado.
+
 ### Cómo llega el dinero
 
 Hay dos formas principales:
@@ -31,6 +33,8 @@ Hay dos formas principales:
 2. **Invoice directa:** le mandas la invoice a la empresa cada mes y ellos transfieren a tu cuenta internacional.
 
 Para recibir, las opciones más comunes son **Wise, Payoneer, Husky (que hoy es de Nomad), Inter (cuenta global), Nomad y Avenue** (las últimas son brasileñas; en tu país seguro hay equivalentes). Lo que importa es el **spread** (la diferencia entre el tipo de cambio que te dan y el tipo de cambio comercial) y las comisiones fijas. Parece poco, pero 1% de diferencia en 5 mil dólares son 50 dólares **cada mes**, 600 al año. Compara.
+
+Yo recomiendo **[Wise](https://wise.com)**. Recibes en una cuenta en dólares a tu nombre, convierten al tipo de cambio comercial con una comisión que te muestran en la cara antes de confirmar, y el dinero cae en la cuenta de tu empresa sin sorpresas.
 
 ## Fondo de emergencia
 
@@ -47,7 +51,9 @@ Entonces:
 
 El trabajo remoto vive y muere por la comunicación. El que entrega poco pero comunica bien dura más que el genio que desaparece. Lo ideal es entregar bien **y** comunicar bien.
 
-- **Sobrecomunica.** Nadie te está viendo. Si no dices lo que estás haciendo, para quien te gestiona no estás haciendo nada.
+- **Comunica siempre.** Nadie te está viendo. Si no dices lo que estás haciendo, para quien te gestiona no estás haciendo nada.
+- **Pero sin choros.** Al gringo no le gusta el contexto extra. Nada de "terminé la tarea, pero salió un problema que llevó a otro, y tuve que tocar no sé qué, y bla bla bla". Solo: **"I've completed this task."** Si quieren saber más, preguntan. El contexto solo entra cuando cambia algo para quien lo lee (se retrasó, necesita una decisión, rompió otra cosa).
+- **Date el crédito.** A los gringos les encanta y esperan que tú también lo hagas. Es **"I did this"**, no "the team did this". Los latinos tenemos la manía de diluir nuestro trabajo en el "nosotros", y luego nadie sabe que fuiste tú.
 - **No mandes solo "hola".** Manda "Hola, fulano, tengo un problema con el deploy de X, ya intenté Y y Z, ¿me puedes ayudar?" de una vez. El gringo odia el "Hi" y quedarse esperando respuesta. Hasta hay un sitio sobre eso: [nohello.net](https://nohello.net).
 - **Escribe updates.** Al final del día (o de la semana), manda un resumen de lo que hiciste, lo que vas a hacer y lo que te está trabando. Tu jefe lo va a amar, y eso se vuelve prueba de tu trabajo a la hora de la evaluación.
 - **Pregunta en el canal público, no por DM.** Así más gente puede ayudar, y la respuesta queda registrada para el siguiente.
@@ -98,6 +104,7 @@ Ya tuve dos contratos al mismo tiempo, y otra vez los tengo. No voy a fingir que
 - **Separa todo:** computadora, cuentas, e-mail, navegador. Nunca uses el equipo de uno para el trabajo del otro.
 - **Administra la agenda** como si tu vida dependiera de ello. Bloquea horarios en los dos calendarios.
 - **Quédate callado.** No lo comentes con compañeros, no lo publiques en LinkedIn.
+- **No actualices tu LinkedIn.** Yo no actualizo el mío a menos que sea extremadamente necesario (como cuando me quedo sin trabajo). Si te piden que lo actualices, hazte el que no vio. Si insisten, ahí ya no hay de otra, es el riesgo que se corre.
 
 ## Cuando se acabe
 
@@ -105,6 +112,6 @@ Porque se va a acabar, tarde o temprano:
 
 - **No quemes el puente.** Sal bien, entrega la transición, da las gracias. El mundo es un pañuelo, y mucha gente que trabajó contigo te va a recomendar en el futuro.
 - **Pide recomendaciones en LinkedIn** mientras todos todavía se acuerdan de ti.
-- **Nunca dejes de buscar trabajo del todo.** Aunque tengas trabajo, mantén LinkedIn activo, acepta pláticas con reclutadores, haz una entrevista de vez en cuando. Así, cuando llegue el e-mail del viernes, ya tienes por dónde empezar.
+- **Nunca dejes de buscar trabajo del todo.** Aunque tengas trabajo, sigue agregando gente en LinkedIn, acepta pláticas con reclutadores, haz una entrevista de vez en cuando. Así, cuando llegue el e-mail del viernes, ya tienes por dónde empezar.
 
 Y cuando estés del otro lado, cobrando en moneda fuerte, regresa aquí y **escribe tu historia**. Así es como mejora este sitio.

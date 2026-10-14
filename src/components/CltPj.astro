@@ -1,0 +1,460 @@
+---
+// Calculadora CLT x PJ exportando serviço (contrato em dólar).
+// Regras de 2026: INSS e IRRF (com o redutor da Lei 15.270/2025),
+// Simples Nacional Anexo III com Fator R e isenção de ISS/PIS/COFINS na exportação.
+// É uma estimativa: o número real é com o seu contador.
+
+const t = {
+	pt: {
+		title: 'CLT ou PJ gringo: quanto sobra no seu bolso?',
+		intro: 'Compara o que sua CLT vale de verdade por mês (com 13º, férias, FGTS e benefícios) com o que um contrato em dólar deixa líquido depois de imposto, contador e câmbio.',
+		clt: 'Hoje (CLT)',
+		pj: 'Contrato gringo (PJ)',
+		gross: 'Salário bruto mensal',
+		benefits: 'Benefícios por mês (VR, VA, plano de saúde)',
+		contract: 'Contrato mensal (US$)',
+		rate: 'Câmbio (R$ por US$)',
+		spread: 'Spread + taxas do câmbio (%)',
+		accountant: 'Contador por mês (R$)',
+		vacation: 'Vou tirar 30 dias de férias por ano sem receber',
+		outClt: 'Sua CLT vale, por mês',
+		outPj: 'O contrato deixa líquido, por mês',
+		outMult: 'Diferença',
+		breakeven: 'Pra empatar com a sua CLT, o contrato precisa ser de pelo menos',
+		perMonth: '/mês',
+		details: 'Ver a conta detalhada',
+		dNetClt: 'Salário líquido mensal (após INSS e IR)',
+		d13: '13º líquido (dividido por 12)',
+		dVac: 'Terço de férias líquido (dividido por 12)',
+		dFgts: 'FGTS (8% sobre salário, 13º e férias, dividido por 12)',
+		dBen: 'Benefícios',
+		dRev: 'Faturamento em reais (já descontado o spread)',
+		dDas: 'DAS do Simples (Anexo III, só a parte que exportação paga)',
+		dPl: 'Pró-labore (28% pro Fator R)',
+		dInss: 'INSS sobre o pró-labore (11%)',
+		dIr: 'IR sobre o pró-labore',
+		dAcc: 'Contador',
+		dDiv: 'IR retido sobre dividendos (acima de R$ 50 mil/mês)',
+		dVacPj: 'Desconto de 1 mês sem receber (dividido por 12)',
+		disclaimer:
+			'Estimativa com as tabelas de 2026, sem dependentes, considerando empresa no Simples Nacional, Anexo III (Fator R) e receita 100% de exportação. Não inclui multa do FGTS, seguro-desemprego, PLR, nem a previdência que você vai ter que fazer por conta própria. Confirme tudo com um contador.',
+	},
+	en: {
+		title: 'CLT vs. foreign contract: how much actually lands in your pocket?',
+		intro: 'Compares what a Brazilian CLT job is really worth per month (13th salary, paid vacation, FGTS and benefits included) with what a USD contract leaves you after taxes, accountant and FX fees.',
+		clt: 'Today (CLT)',
+		pj: 'Foreign contract (PJ)',
+		gross: 'Gross monthly salary (R$)',
+		benefits: 'Monthly benefits (meal vouchers, health plan) (R$)',
+		contract: 'Monthly contract (US$)',
+		rate: 'Exchange rate (R$ per US$)',
+		spread: 'FX spread + fees (%)',
+		accountant: 'Accountant per month (R$)',
+		vacation: 'I will take 30 days off per year, unpaid',
+		outClt: 'Your CLT job is worth, per month',
+		outPj: 'The contract leaves you, per month',
+		outMult: 'Difference',
+		breakeven: 'To match your CLT job, the contract needs to be at least',
+		perMonth: '/month',
+		details: 'Show the full math',
+		dNetClt: 'Net monthly salary (after INSS and income tax)',
+		d13: 'Net 13th salary (divided by 12)',
+		dVac: 'Net vacation bonus (divided by 12)',
+		dFgts: 'FGTS (8% of salary, 13th and vacation, divided by 12)',
+		dBen: 'Benefits',
+		dRev: 'Revenue in reais (after FX spread)',
+		dDas: 'Simples Nacional tax (Anexo III, export share only)',
+		dPl: 'Pró-labore (owner salary, 28% for Fator R)',
+		dInss: 'INSS on pró-labore (11%)',
+		dIr: 'Income tax on pró-labore',
+		dAcc: 'Accountant',
+		dDiv: 'Tax withheld on dividends (above R$ 50k/month)',
+		dVacPj: 'One unpaid month off (divided by 12)',
+		disclaimer:
+			'Estimate using 2026 Brazilian tax tables, no dependents, assuming a company under Simples Nacional, Anexo III (Fator R) and 100% export revenue. Does not include FGTS severance, unemployment insurance, profit sharing, or the retirement savings you will have to do yourself. Confirm everything with an accountant.',
+	},
+};
+
+interface Props {
+	lang: 'pt' | 'en';
+}
+const { lang } = Astro.props;
+const l = t[lang];
+const locale = lang === 'pt' ? 'pt-BR' : 'en-US';
+---
+
+<section class="cltpj not-content" data-locale={locale}>
+	<h2>{l.title}</h2>
+	<p class="cltpj-intro">{l.intro}</p>
+
+	<div class="cltpj-cols">
+		<fieldset>
+			<legend>{l.clt}</legend>
+			<label>{l.gross}<input name="gross" type="number" min="0" step="500" value="10000" inputmode="decimal" /></label>
+			<label>{l.benefits}<input name="benefits" type="number" min="0" step="100" value="1200" inputmode="decimal" /></label>
+		</fieldset>
+		<fieldset>
+			<legend>{l.pj}</legend>
+			<label>{l.contract}<input name="usd" type="number" min="0" step="250" value="5000" inputmode="decimal" /></label>
+			<div class="cltpj-row">
+				<label>{l.rate}<input name="rate" type="number" min="0" step="0.01" value="5.50" inputmode="decimal" /></label>
+				<label>{l.spread}<input name="spread" type="number" min="0" step="0.1" value="1" inputmode="decimal" /></label>
+			</div>
+			<label>{l.accountant}<input name="accountant" type="number" min="0" step="50" value="300" inputmode="decimal" /></label>
+			<label class="cltpj-check"><input name="vacation" type="checkbox" checked /> {l.vacation}</label>
+		</fieldset>
+	</div>
+
+	<div class="cltpj-results">
+		<div class="cltpj-card">
+			<span>{l.outClt}</span>
+			<strong data-out="clt">—</strong>
+		</div>
+		<div class="cltpj-card cltpj-card--hl">
+			<span>{l.outPj}</span>
+			<strong data-out="pj">—</strong>
+		</div>
+		<div class="cltpj-card">
+			<span>{l.outMult}</span>
+			<strong data-out="mult">—</strong>
+		</div>
+	</div>
+	<p class="cltpj-breakeven">{l.breakeven} <strong data-out="breakeven">—</strong>{l.perMonth}</p>
+
+	<details class="cltpj-details">
+		<summary>{l.details}</summary>
+		<div class="cltpj-tables">
+			<table>
+				<caption>{l.clt}</caption>
+				<tbody>
+					<tr><td>{l.dNetClt}</td><td data-out="dNetClt"></td></tr>
+					<tr><td>{l.d13}</td><td data-out="d13"></td></tr>
+					<tr><td>{l.dVac}</td><td data-out="dVac"></td></tr>
+					<tr><td>{l.dFgts}</td><td data-out="dFgts"></td></tr>
+					<tr><td>{l.dBen}</td><td data-out="dBen"></td></tr>
+				</tbody>
+			</table>
+			<table>
+				<caption>{l.pj}</caption>
+				<tbody>
+					<tr><td>{l.dRev}</td><td data-out="dRev"></td></tr>
+					<tr><td>{l.dDas}</td><td data-out="dDas"></td></tr>
+					<tr><td>{l.dPl}</td><td data-out="dPl"></td></tr>
+					<tr><td>{l.dInss}</td><td data-out="dInss"></td></tr>
+					<tr><td>{l.dIr}</td><td data-out="dIr"></td></tr>
+					<tr><td>{l.dAcc}</td><td data-out="dAcc"></td></tr>
+					<tr><td>{l.dDiv}</td><td data-out="dDiv"></td></tr>
+					<tr><td>{l.dVacPj}</td><td data-out="dVacPj"></td></tr>
+				</tbody>
+			</table>
+		</div>
+		<p class="cltpj-disclaimer">{l.disclaimer}</p>
+	</details>
+</section>
+
+<script>
+	// ---------- Tabelas 2026 ----------
+	// INSS empregado (progressivo). Teto R$ 8.475,55.
+	const INSS_BANDS: [number, number][] = [
+		[1621.0, 0.075],
+		[2902.84, 0.09],
+		[4354.27, 0.12],
+		[8475.55, 0.14],
+	];
+	const INSS_CEILING = 8475.55;
+	// IRRF mensal: [até, alíquota, parcela a deduzir]
+	const IR_TABLE: [number, number, number][] = [
+		[2428.8, 0, 0],
+		[2826.65, 0.075, 182.16],
+		[3751.05, 0.15, 394.16],
+		[4664.68, 0.225, 675.49],
+		[Infinity, 0.275, 908.73],
+	];
+	const IR_SIMPLIFIED_DISCOUNT = 607.2;
+	const MIN_WAGE = 1621.0;
+	// Simples Nacional Anexo III: [receita bruta 12 meses até, alíquota nominal, parcela a deduzir]
+	const ANEXO_III: [number, number, number][] = [
+		[180000, 0.06, 0],
+		[360000, 0.112, 9360],
+		[720000, 0.135, 17640],
+		[1800000, 0.16, 35640],
+		[3600000, 0.21, 125640],
+		[4800000, 0.33, 648000],
+	];
+	// Na exportação saem ISS, PIS e COFINS: sobram IRPJ (4%) + CSLL (3,5%) + CPP (43,4%) do DAS.
+	const EXPORT_SHARE = 0.509;
+	const DIVIDEND_LIMIT = 50000;
+
+	function inssEmployee(gross: number): number {
+		let tax = 0;
+		let prev = 0;
+		for (const [limit, rate] of INSS_BANDS) {
+			if (gross <= prev) break;
+			tax += (Math.min(gross, limit) - prev) * rate;
+			prev = limit;
+		}
+		return tax;
+	}
+
+	// IR mensal com o redutor de 2026: zera até R$ 5 mil e reduz até R$ 7.350.
+	function incomeTax(gross: number, deductions: number): number {
+		const base = gross - Math.max(deductions, IR_SIMPLIFIED_DISCOUNT);
+		const [, rate, ded] = IR_TABLE.find(([limit]) => base <= limit)!;
+		let tax = Math.max(0, base * rate - ded);
+		if (gross <= 5000) tax = Math.max(0, tax - 312.89);
+		else if (gross <= 7350) tax = Math.max(0, tax - (978.62 - 0.133145 * gross));
+		return tax;
+	}
+
+	function cltNet(gross: number): number {
+		const inss = inssEmployee(gross);
+		return gross - inss - incomeTax(gross, inss);
+	}
+
+	function clt(gross: number, benefits: number) {
+		const net = cltNet(gross);
+		const net13 = net; // 13º tem tributação exclusiva; aproximado pelo líquido mensal
+		const vacBonus = cltNet((gross * 4) / 3) - net; // terço de férias, tributado junto com o salário do mês
+		const fgts = 0.08 * gross * (12 + 1 + 1 / 3);
+		const monthly = net + net13 / 12 + vacBonus / 12 + fgts / 12 + benefits;
+		return { net, d13: net13 / 12, dVac: vacBonus / 12, dFgts: fgts / 12, dBen: benefits, monthly };
+	}
+
+	function pj(usd: number, rate: number, spreadPct: number, accountant: number, unpaidVacation: boolean) {
+		const revenue = usd * rate * (1 - spreadPct / 100);
+		const rbt12 = revenue * 12;
+		const [, nominal, ded] = ANEXO_III.find(([limit]) => rbt12 <= limit) ?? ANEXO_III[ANEXO_III.length - 1];
+		const effective = rbt12 > 0 ? (rbt12 * nominal - ded) / rbt12 : 0;
+		const das = revenue * effective * EXPORT_SHARE;
+		const proLabore = revenue > 0 ? Math.max(0.28 * revenue, MIN_WAGE) : 0;
+		const inss = 0.11 * Math.min(proLabore, INSS_CEILING);
+		const ir = incomeTax(proLabore, inss);
+		const dividends = Math.max(0, revenue - das - proLabore - accountant);
+		const divTax = dividends > DIVIDEND_LIMIT ? dividends * 0.1 : 0;
+		const net = proLabore - inss - ir + dividends - divTax;
+		const vacCut = unpaidVacation ? net / 12 : 0;
+		return { revenue, das, proLabore, inss, ir, accountant, divTax, vacCut, monthly: net - vacCut };
+	}
+
+	document.querySelectorAll<HTMLElement>('.cltpj').forEach(async (root) => {
+		const locale = root.dataset.locale || 'pt-BR';
+		const brl = new Intl.NumberFormat(locale, { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 });
+		const usdFmt = new Intl.NumberFormat(locale, { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+		const input = (n: string) => root.querySelector<HTMLInputElement>(`[name="${n}"]`)!;
+		const num = (n: string) => Math.max(0, Number(input(n).value) || 0);
+		const out = (k: string, v: string) => {
+			const el = root.querySelector<HTMLElement>(`[data-out="${k}"]`);
+			if (el) el.textContent = v;
+		};
+		const minus = (v: number) => (v > 0.5 ? `− ${brl.format(v)}` : brl.format(0));
+
+		const render = () => {
+			const c = clt(num('gross'), num('benefits'));
+			const args = [num('rate'), num('spread'), num('accountant'), input('vacation').checked] as const;
+			const p = pj(num('usd'), ...args);
+
+			out('clt', brl.format(c.monthly));
+			out('pj', brl.format(p.monthly));
+			out('mult', c.monthly > 0 ? `${(p.monthly / c.monthly).toFixed(1)}×` : '—');
+
+			// Menor contrato em US$ que empata com a CLT (busca binária).
+			let lo = 0;
+			let hi = 200000;
+			for (let i = 0; i < 40; i++) {
+				const mid = (lo + hi) / 2;
+				if (pj(mid, ...args).monthly >= c.monthly) hi = mid;
+				else lo = mid;
+			}
+			out('breakeven', usdFmt.format(Math.ceil(hi / 50) * 50));
+
+			out('dNetClt', brl.format(c.net));
+			out('d13', brl.format(c.d13));
+			out('dVac', brl.format(c.dVac));
+			out('dFgts', brl.format(c.dFgts));
+			out('dBen', brl.format(c.dBen));
+			out('dRev', brl.format(p.revenue));
+			out('dDas', minus(p.das));
+			out('dPl', brl.format(p.proLabore));
+			out('dInss', minus(p.inss));
+			out('dIr', minus(p.ir));
+			out('dAcc', minus(p.accountant));
+			out('dDiv', minus(p.divTax));
+			out('dVacPj', minus(p.vacCut));
+		};
+
+		root.querySelectorAll('input').forEach((el) => el.addEventListener('input', render));
+		render();
+
+		try {
+			const res = await fetch('https://open.er-api.com/v6/latest/USD');
+			const data = await res.json();
+			if (data?.rates?.BRL) {
+				input('rate').value = data.rates.BRL.toFixed(2);
+				render();
+			}
+		} catch {
+			/* sem internet ou API fora: fica o valor padrão, que a pessoa pode editar */
+		}
+	});
+</script>
+
+<style>
+	.cltpj {
+		border-radius: 1.25rem;
+		padding: clamp(1.25rem, 4vw, 2.25rem);
+		background: var(--gringa-green-900);
+		color: var(--gringa-cream);
+	}
+	.cltpj h2 {
+		font-family: var(--gringa-font-display);
+		font-size: clamp(1.4rem, 3vw, 2rem);
+		line-height: 1.15;
+		margin: 0 0 0.5rem;
+		color: var(--gringa-cream);
+	}
+	.cltpj-intro {
+		margin: 0 0 1.5rem;
+		font-size: var(--sl-text-sm);
+		opacity: 0.8;
+		max-width: 46rem;
+	}
+	.cltpj-cols {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+		gap: 1rem;
+		margin-bottom: 1.25rem;
+	}
+	.cltpj fieldset {
+		border: 1px solid rgba(244, 239, 227, 0.18);
+		border-radius: 0.9rem;
+		padding: 0.75rem 1rem 1rem;
+		margin: 0;
+		display: grid;
+		gap: 0.75rem;
+		align-content: start;
+	}
+	.cltpj legend {
+		font-family: var(--gringa-font-display);
+		font-weight: 700;
+		padding: 0 0.4rem;
+		color: var(--gringa-lime);
+	}
+	.cltpj label {
+		display: grid;
+		gap: 0.3rem;
+		font-size: var(--sl-text-xs);
+		opacity: 0.9;
+	}
+	.cltpj-row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.75rem;
+		align-items: end;
+	}
+	.cltpj input[type='number'] {
+		font: inherit;
+		font-family: var(--gringa-font-display);
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: var(--gringa-cream);
+		background: rgba(244, 239, 227, 0.07);
+		border: 1px solid rgba(244, 239, 227, 0.22);
+		border-radius: 0.6rem;
+		padding: 0.45rem 0.65rem;
+		width: 100%;
+		min-width: 0;
+	}
+	.cltpj input[type='number']:focus {
+		outline: none;
+		border-color: var(--gringa-lime);
+	}
+	.cltpj .cltpj-check {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		cursor: pointer;
+	}
+	.cltpj-check input {
+		accent-color: var(--gringa-lime);
+		width: 1rem;
+		height: 1rem;
+	}
+	.cltpj-results {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+		gap: 0.75rem;
+	}
+	.cltpj-card {
+		border-radius: 0.9rem;
+		padding: 0.9rem 1rem;
+		background: rgba(244, 239, 227, 0.06);
+		border: 1px solid rgba(244, 239, 227, 0.12);
+	}
+	.cltpj-card--hl {
+		background: var(--gringa-lime);
+		color: var(--gringa-green-900);
+		border-color: transparent;
+	}
+	.cltpj-card span {
+		display: block;
+		font-size: var(--sl-text-xs);
+		opacity: 0.85;
+		margin-bottom: 0.35rem;
+	}
+	.cltpj-card strong {
+		font-family: var(--gringa-font-display);
+		font-size: 1.6rem;
+		line-height: 1.1;
+	}
+	.cltpj-breakeven {
+		margin: 1rem 0 0;
+		font-size: var(--sl-text-sm);
+	}
+	.cltpj-breakeven strong {
+		color: var(--gringa-lime);
+		font-family: var(--gringa-font-display);
+		font-size: 1.1rem;
+	}
+	.cltpj-details {
+		margin-top: 1.25rem;
+		font-size: var(--sl-text-sm);
+	}
+	.cltpj-details summary {
+		cursor: pointer;
+		color: var(--gringa-lime);
+		font-weight: 600;
+	}
+	.cltpj-tables {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+		gap: 1rem;
+		margin-top: 0.75rem;
+	}
+	.cltpj table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: var(--sl-text-xs);
+	}
+	.cltpj caption {
+		text-align: start;
+		font-weight: 700;
+		padding-bottom: 0.35rem;
+		color: var(--gringa-lime);
+	}
+	.cltpj td {
+		padding: 0.3rem 0;
+		border-bottom: 1px solid rgba(244, 239, 227, 0.1);
+		vertical-align: top;
+	}
+	.cltpj td:last-child {
+		text-align: end;
+		white-space: nowrap;
+		padding-inline-start: 0.75rem;
+		font-variant-numeric: tabular-nums;
+	}
+	.cltpj-disclaimer {
+		margin: 0.9rem 0 0;
+		font-size: var(--sl-text-xs);
+		opacity: 0.65;
+	}
+</style>

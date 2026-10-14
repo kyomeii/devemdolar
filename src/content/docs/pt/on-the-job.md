@@ -17,7 +17,9 @@ Quase todo contrato pra gringa é como **contractor** (prestador de serviço), e
 - **Reforma tributária:** a CBS e o IBS estão entrando aos poucos a partir de 2026, mas exportação de serviço continua imune. Mesmo assim, fica de olho.
 - **Dividendos:** desde 2026, se uma única empresa te paga mais de R$ 50 mil por mês em dividendos, tem retenção de 10% de IR na fonte sobre o valor **inteiro** (não só o que passar de 50 mil), e tem também um imposto mínimo anual pra quem ganha mais de R$ 600 mil por ano. Se você chegou nesse patamar, parabéns, e fala com seu contador.
 
-Procure uma **contabilidade especializada em quem exporta serviço**. Tem várias online que já fazem isso no automático, e cobram uns poucos centos de reais por mês. Vale cada centavo.
+Procure uma **contabilidade especializada em quem exporta serviço**. Tem várias online que já fazem isso no automático, e cobram umas poucas centenas de reais por mês. Vale cada centavo.
+
+Parece muita coisa, mas relaxa: eu mesmo quase não me preocupei com isso. Fiz tudo pela **Contabilizei**, e eles fizeram todo o processo. Uma coisa ou outra eu tive que agir, mas nada complexo demais.
 
 ### Como o dinheiro chega
 
@@ -27,6 +29,8 @@ Tem dois jeitos principais:
 2. **Invoice direta:** você manda a invoice pra empresa todo mês e eles transferem pra sua conta internacional.
 
 Pra receber, as opções mais comuns são **Wise, Payoneer, Husky (que hoje é da Nomad), Inter (conta global), Nomad e Avenue**. O que importa é o **spread** (a diferença entre o câmbio que eles te dão e o câmbio comercial) e as taxas fixas. Parece pouco, mas 1% de diferença em 5 mil dólares é 50 dólares **todo mês**, 600 por ano. Compare.
+
+Eu recomendo a **[Wise](https://wise.com)**. Você recebe numa conta em dólar no seu nome, eles convertem pelo câmbio comercial cobrando uma taxa que aparece na sua cara antes de confirmar, e o dinheiro cai na conta da sua empresa sem surpresa.
 
 > **Não é brasileiro?** O espírito é o mesmo: descubra o regime de autônomo/empresa simplificada do seu país (monotributo na Argentina, RESICO no México, régimen simple na Colômbia, boleta de honorarios no Chile) e ache um contador que já atende quem trabalha pra fora.
 
@@ -45,7 +49,9 @@ Então:
 
 Trabalho remoto vive e morre na comunicação. O cara que entrega pouco mas comunica bem dura mais do que o gênio que some. O ideal é entregar bem **e** comunicar bem.
 
-- **Sobre-comunique.** Ninguém tá te vendo. Se você não fala o que tá fazendo, pra quem gerencia você não tá fazendo nada.
+- **Comunique sempre.** Ninguém tá te vendo. Se você não fala o que tá fazendo, pra quem gerencia você não tá fazendo nada.
+- **Mas sem textão.** Americano não quer contexto extra. Nada de "terminei a task, mas apareceu um problema que levou a outro, aí eu tive que mexer em não sei o quê, e bla bla bla". Só: **"I've completed this task."** Se quiserem saber mais, eles perguntam. O contexto só entra quando ele muda alguma coisa pra quem tá lendo (atrasou, precisa de decisão, quebrou outra coisa).
+- **Se dê o crédito.** Americano adora isso, e espera que você faça também. É **"I did this"**, não "the team did this". Brasileiro tem mania de diluir o próprio trabalho no "a gente", e aí ninguém sabe que foi você.
 - **Não mande só "oi".** Manda "Oi, fulano, tô com um problema no deploy de X, já tentei Y e Z, você consegue me ajudar?" de uma vez. Gringo odeia "Hi" e esperar resposta. Tem até site sobre isso: [nohello.net](https://nohello.net).
 - **Escreva updates.** No fim do dia (ou da semana), manda um resumo do que fez, o que vai fazer e o que tá te travando. Seu gestor vai amar, e isso vira prova do seu trabalho na hora da avaliação.
 - **Pergunte em canal público, não na DM.** Assim mais gente pode ajudar, e a resposta fica registrada pro próximo.
@@ -94,6 +100,7 @@ Eu já tive dois contratos ao mesmo tempo, e tenho de novo. Não vou fingir que 
 - **Separe tudo:** computador, contas, e-mail, navegador. Nunca use o equipamento de um pro trabalho do outro.
 - **Gerencie a agenda** como se sua vida dependesse disso. Bloqueie horários nos dois calendários.
 - **Fique quieto.** Não comente com colega, não poste no LinkedIn.
+- **Não atualize o LinkedIn.** Eu mesmo não atualizo o meu a não ser que seja extremamente necessário (no caso de ficar desempregado). Se te pedirem pra atualizar, finge que não viu. Se insistirem, aí não tem jeito mesmo, é o risco que se corre.
 
 ## Quando acabar
 
@@ -101,6 +108,6 @@ Porque vai acabar, mais cedo ou mais tarde:
 
 - **Não queime a ponte.** Saia bem, entregue a transição, agradeça. O mundo é pequeno, e muita gente que trabalhou com você vai te indicar no futuro.
 - **Peça recomendação no LinkedIn** enquanto todo mundo ainda lembra de você.
-- **Nunca pare de procurar vaga de vez.** Mesmo empregado, mantenha o LinkedIn ativo, aceite papo com recrutador, faça uma entrevista de vez em quando. Assim, quando o e-mail de sexta-feira chegar, você já tem por onde começar.
+- **Nunca pare de procurar vaga de vez.** Mesmo empregado, continue adicionando gente no LinkedIn, aceite papo com recrutador, faça uma entrevista de vez em quando. Assim, quando o e-mail de sexta-feira chegar, você já tem por onde começar.
 
 E quando você estiver do outro lado, ganhando em moeda forte, volta aqui e **escreve o seu relato**. É assim que esse site melhora.

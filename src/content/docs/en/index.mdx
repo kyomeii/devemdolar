@@ -4,7 +4,7 @@ description: A free, open source, no-guru-bullshit guide for tech professionals 
 template: splash
 hero:
   title: Stop getting paid in <em>shitcoin</em>.
-  tagline: The free, open source, no-guru-bullshit guide for Brazilian (and Latin American) tech professionals who want to work remotely for foreign companies, getting paid in dollars or euros.
+  tagline: <strong>Shitcoin = the Brazilian real.</strong> The free, open source, no-guru-bullshit guide for Brazilian (and Latin American) tech professionals who want to work remotely for foreign companies, getting paid in dollars or euros.
   image:
     html: '<img src="/hero.webp" width="1168" height="880" alt="Illustration of a dev working on a laptop at night, with a view of Sugarloaf Mountain, and a paper airplane folded from a dollar bill flying out the window." />'
   actions:
@@ -18,13 +18,12 @@ hero:
 ---
 
 import ChapterGrid from '../../../components/ChapterGrid.astro';
-import Converter from '../../../components/Converter.astro';
+import CltPj from '../../../components/CltPj.astro';
 
 <div class="home-stats not-content">
 	<div><strong>US$ 10k</strong><span>a month, what I was making at my peak with two contracts</span></div>
-	<div><strong>$0</strong><span>what this guide costs. Same as any mentoring you shouldn't be buying</span></div>
+	<div><strong>$0</strong><span>what this guide costs.</span></div>
 	<div><strong>8</strong><span>chapters, from English all the way to not fucking up at work</span></div>
-	<div><strong>3</strong><span>languages, maintained by the community</span></div>
 </div>
 
 <section class="home-section not-content">
@@ -38,7 +37,7 @@ import Converter from '../../../components/Converter.astro';
 			{ slug: 'technical', title: 'Technical', desc: 'Master your stack. What matters in the AI era, plus the books.' },
 			{ slug: 'resume', title: 'Resume', desc: 'Beat the ATS, put metrics on everything, lie responsibly.' },
 			{ slug: 'linkedin', title: 'LinkedIn', desc: 'Connections, LIONs, 500+ and making the algorithm work for you.' },
-			{ slug: 'job-hunting', title: 'Job hunting', desc: 'Boolean search, Posts, site: on Google, and HiringCafe.' },
+			{ slug: 'job-hunting', title: 'Job hunting', desc: 'Where you will actually find your job.' },
 			{ slug: 'interview', title: 'Interview', desc: 'STAR, live coding, salary in dollars, and the scams.' },
 			{ slug: 'on-the-job', title: 'On the job', desc: "CNPJ, taxes, exchange rates, time zones, and how not to get fired." },
 		]}
@@ -46,15 +45,7 @@ import Converter from '../../../components/Converter.astro';
 </section>
 
 <section class="home-section not-content">
-	<Converter
-		locale="en-US"
-		title="How much are you leaving on the table?"
-		inputLabel="Your current gross monthly salary"
-		yourSalary="Your salary, in dollars"
-		contractLabel="A typical foreign contract (US$ 5k/month), in your currency"
-		multiplierLabel="How many times more"
-		rateLabel="Today's exchange rate:"
-	/>
+	<CltPj lang="en" />
 </section>
 
 <section class="home-section not-content">

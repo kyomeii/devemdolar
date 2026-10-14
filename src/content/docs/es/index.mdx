@@ -4,7 +4,7 @@ description: Guía gratuita, open source y sin choro de coach para que profesion
 template: splash
 hero:
   title: Deja de cobrar en <em>shitcoin</em>.
-  tagline: La guía gratuita, open source y sin choro de coach para que profesionales de tecnología latinoamericanos trabajen remoto para el extranjero, cobrando en dólares o euros.
+  tagline: <strong>Shitcoin = el real brasileño.</strong> La guía gratuita, open source y sin choro de coach para que profesionales de tecnología latinoamericanos trabajen remoto para el extranjero, cobrando en dólares o euros.
   image:
     html: '<img src="/hero.webp" width="1168" height="880" alt="Ilustración de un dev trabajando en la laptop de noche, con vista al Pan de Azúcar, y un avioncito de papel hecho con un billete de dólar volando por la ventana." />'
   actions:
@@ -22,9 +22,8 @@ import Converter from '../../../components/Converter.astro';
 
 <div class="home-stats not-content">
 	<div><strong>US$ 10k</strong><span>al mes, lo que llegué a ganar con dos contratos</span></div>
-	<div><strong>$ 0</strong><span>lo que cuesta esta guía. Y lo que debería costar cualquier mentoría que no deberías comprar</span></div>
+	<div><strong>$ 0</strong><span>lo que cuesta esta guía.</span></div>
 	<div><strong>8</strong><span>capítulos, desde el inglés hasta cómo no cagarla en el trabajo</span></div>
-	<div><strong>3</strong><span>idiomas, mantenido por la comunidad</span></div>
 </div>
 
 <section class="home-section not-content">
@@ -38,7 +37,7 @@ import Converter from '../../../components/Converter.astro';
 			{ slug: 'technical', title: 'Técnico', desc: 'Domina tu stack. Lo que importa en la era de la IA, y los libros.' },
 			{ slug: 'resume', title: 'Currículum', desc: 'Pasa el ATS, ponle métricas a todo, miente con conciencia.' },
 			{ slug: 'linkedin', title: 'LinkedIn', desc: 'Conexiones, LIONs, 500+ y el algoritmo trabajando para ti.' },
-			{ slug: 'job-hunting', title: 'Buscar vacantes', desc: 'Búsqueda booleana, Posts, site: en Google y HiringCafe.' },
+			{ slug: 'job-hunting', title: 'Buscar vacantes', desc: 'Dónde vas a encontrar tu chamba.' },
 			{ slug: 'interview', title: 'Entrevista', desc: 'STAR, live coding, salario en dólares, y las estafas.' },
 			{ slug: 'on-the-job', title: 'En el trabajo', desc: 'Impuestos, tipo de cambio, husos horarios, y cómo no que te corran.' },
 		]}
@@ -49,12 +48,13 @@ import Converter from '../../../components/Converter.astro';
 	<Converter
 		locale="es"
 		currency="MXN"
-		title="¿Cuánto estás dejando sobre la mesa?"
+		title="¿Cuánto estás dejando sobre la mesa? (en bruto)"
 		inputLabel="Tu salario bruto mensual hoy"
 		yourSalary="Tu salario, en dólares"
 		contractLabel="Un contrato gringo normalito (US$ 5k/mes), en tu moneda"
 		multiplierLabel="Cuántas veces más"
 		rateLabel="Tipo de cambio de hoy:"
+		note="Ojo: esto compara bruto contra bruto. No incluye impuestos, aguinaldo, vacaciones ni prestaciones de tu empleo actual, ni lo que vas a pagar como contractor (impuestos, contador, comisiones de cambio). Sirve para dimensionar, no para decidir: el número real te lo da un contador de tu país."
 	/>
 </section>
 

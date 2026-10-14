@@ -11,8 +11,10 @@ interface Props {
 	locale: string;
 	/** Moeda inicial: BRL, MXN, ARS, COP, CLP ou PEN */
 	currency?: string;
+	/** Aviso de que a comparação é bruta, sem impostos */
+	note?: string;
 }
-const { title, inputLabel, yourSalary, contractLabel, multiplierLabel, rateLabel, locale, currency = 'BRL' } =
+const { title, inputLabel, yourSalary, contractLabel, multiplierLabel, rateLabel, locale, currency = 'BRL', note } =
 	Astro.props;
 const currencies = ['BRL', 'MXN', 'ARS', 'COP', 'CLP', 'PEN'];
 ---
@@ -43,6 +45,7 @@ const currencies = ['BRL', 'MXN', 'ARS', 'COP', 'CLP', 'PEN'];
 		</div>
 	</div>
 	<p class="conv-rate">{rateLabel} <span data-out="rate">—</span></p>
+	{note && <p class="conv-note">{note}</p>}
 </section>
 
 <script>
@@ -204,6 +207,14 @@ const currencies = ['BRL', 'MXN', 'ARS', 'COP', 'CLP', 'PEN'];
 		font-family: var(--gringa-font-display);
 		font-size: 1.6rem;
 		line-height: 1.1;
+	}
+	.conv-note {
+		margin: 0.75rem 0 0;
+		font-size: var(--sl-text-xs);
+		opacity: 0.8;
+		max-width: 46rem;
+		position: relative;
+		z-index: 1;
 	}
 	.conv-rate {
 		margin: 1rem 0 0;

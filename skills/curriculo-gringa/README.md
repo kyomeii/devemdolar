@@ -19,7 +19,18 @@ Copie a pasta pra `~/.claude/skills/curriculo-gringa/` (ou pra `.claude/skills/`
 1. Pergunta a vaga-alvo e puxa as palavras-chave.
 2. Lê seu material (currículo antigo, LinkedIn, texto solto, em qualquer idioma).
 3. Te faz perguntas pra transformar "eu fazia relatório" em bullet com número.
-4. Entrega o currículo em LaTeX (compila no [Overleaf](https://www.overleaf.com), de graça) ou Markdown.
+4. Escreve o currículo em Markdown e gera o PDF (com o script `scripts/build_resume.py`), no mesmo formato do exemplo do site.
 5. Revisa com você o que tá fraco ou exagerado demais pra sustentar na entrevista.
 
-Os templates ficam em [`templates/`](templates/).
+O modelo fica em [`templates/resume.md`](templates/resume.md).
+
+### Gerar o PDF na mão
+
+Se você editar o `.md` depois, dá pra gerar o PDF de novo sem o Claude:
+
+```bash
+pip install reportlab
+python scripts/build_resume.py resume.md resume.pdf
+```
+
+Por que Markdown e não LaTeX? Pro ATS tanto faz: o que ele precisa é de um PDF com texto selecionável, uma coluna e fonte padrão, e os dois entregam isso. Markdown só é bem mais fácil de editar.

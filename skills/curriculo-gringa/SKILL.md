@@ -1,6 +1,6 @@
 ---
 name: curriculo-gringa
-description: Monta ou revisa um currículo em inglês no padrão das vagas remotas internacionais (EUA/Europa), otimizado pra passar em ATS, seguindo o guia Dev em Dólar. Use quando a pessoa pedir pra criar, melhorar, traduzir ou revisar um currículo/resume/CV pra vagas no exterior, ou disser que quer "trabalhar pra gringa". Gera LaTeX (pra compilar no Overleaf) ou Markdown.
+description: Monta ou revisa um currículo em inglês no padrão das vagas remotas internacionais (EUA/Europa), otimizado pra passar em ATS, seguindo o guia Dev em Dólar. Use quando a pessoa pedir pra criar, melhorar, traduzir ou revisar um currículo/resume/CV pra vagas no exterior, ou disser que quer "trabalhar pra gringa". Escreve o currículo em Markdown e gera o PDF com o script incluso.
 ---
 
 # Currículo gringa
@@ -16,7 +16,7 @@ Você vai ajudar um profissional de tecnologia (geralmente brasileiro ou latino)
 5. **Métrica sempre.** Se a pessoa não mediu, ajude a estimar algo plausível e defensável (tempo economizado, % de redução, custo, número de usuários, volume de dados). Pergunte ordem de grandeza ("era mais perto de 10 ou de 1000 usuários?"). O guia chama isso de *exagero consciente*: plausível e que a pessoa consiga explicar numa entrevista. Nunca invente empresa, cargo, diploma ou período.
 6. **Skills:** agrupadas por categoria (`Languages`, `Data`, `Cloud`, `Tools`...). **Sem soft skills.**
 7. **Educação:** por último. Só sobe pro topo se for instituição de peso.
-8. **Tamanho:** 1 página até ~8 anos de experiência, no máximo 2.
+8. **Tamanho:** 1 página até ~8 anos de experiência, no máximo 2. Confira o número de páginas do PDF gerado e corte bullets fracos se passar.
 9. **Inglês americano**, datas no formato `Mon YYYY`, números com vírgula de milhar (`1,200`).
 
 ## Fluxo
@@ -24,14 +24,18 @@ Você vai ajudar um profissional de tecnologia (geralmente brasileiro ou latino)
 1. **Pergunte a vaga-alvo.** Se a pessoa tiver uma descrição de vaga, peça pra colar. Extraia as palavras-chave (stack, ferramentas, responsabilidades) pra espelhar no currículo, porque o ATS faz match por palavra-chave.
 2. **Colete o material.** Aceite qualquer coisa: currículo antigo em português, texto do LinkedIn, lista solta. Se faltar, pergunte por empresa: o que fazia, com quais ferramentas, qual foi o resultado.
 3. **Cave as métricas.** Para cada bullet sem número, faça 1–2 perguntas curtas pra chegar num número. Agrupe as perguntas, não faça uma por mensagem.
-4. **Escreva o currículo** no formato que a pessoa preferir:
-   - **LaTeX** (padrão): use `templates/resume.tex` como base. Explique que dá pra compilar de graça no [Overleaf](https://www.overleaf.com): *New Project → Upload Project*, ou colar o código num projeto em branco.
-   - **Markdown**: use `templates/resume.md` como base. Pra virar PDF: `pandoc resume.md -o resume.pdf` ou colar num conversor Markdown→PDF.
-5. **Revise com a pessoa**, apontando:
+4. **Escreva o currículo em Markdown**, seguindo **exatamente** o formato de `templates/resume.md` (o script depende dele):
+   - `# Nome`, e na linha de baixo os contatos separados por ` • `.
+   - O primeiro `## ` é o cargo-alvo, seguido do resumo em um parágrafo.
+   - Depois, as seções `## Work Experience`, `## Skills`, `## Education`.
+   - Cada experiência/formação é `### Cargo | Empresa | Período`. Pra marcar contractor/freelancer: `### Cargo • Contractor | Empresa | Período`.
+   - Bullets com `- `. Em Skills, uma linha por categoria: `- **Categoria:** item, item`.
+5. **Gere o PDF** rodando `python scripts/build_resume.py resume.md resume.pdf` (precisa de `reportlab`; se não tiver, `pip install reportlab`). Entregue o PDF **e** o `.md` pra pessoa poder editar depois. Se não der pra rodar código no ambiente, entregue o `.md` e explique como rodar o script localmente.
+6. **Revise com a pessoa**, apontando:
    - bullets fracos ou sem métrica;
    - palavras-chave da vaga que não aparecem;
    - qualquer métrica que pareça exagerada demais pra ela sustentar numa entrevista técnica. Pergunte: "você consegue explicar como chegou nesse número se perguntarem?"
-6. **Entregue também:** uma headline de LinkedIn no formato `Cargo | Stack · Stack · Stack` e um resumo de 2 linhas pro "About".
+7. **Entregue também:** uma headline de LinkedIn no formato `Cargo | Stack · Stack · Stack` e um resumo de 2 linhas pro "About".
 
 ## Verbos de ação úteis
 

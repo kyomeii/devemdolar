@@ -4,7 +4,7 @@
 // ---------------------------------------------------------------
 
 // Endereço final do site (sem barra no fim).
-export const SITE_URL = 'https://devemdolar.workers.dev';
+export const SITE_URL = 'https://devemdolar.kyomei02.workers.dev';
 
 // Endereço do repositório no GitHub.
 export const REPO_URL = 'https://github.com/kyomeii/devemdolar';

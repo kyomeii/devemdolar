@@ -9,15 +9,15 @@ Esse conteúdo é focado para profissionais que **já têm experiência na área
 
 ## Quem sou eu
 
-Como background, trabalho pra gringa desde maio de 2024. Minha trajetória de carreira é a seguinte (você não é obrigado a acreditar, e eu não vou colocar informações pessoais mais detalhadas pra não levar doxxing):
+Como background, trabalho pra gringa desde 2024. Minha trajetória de carreira é a seguinte (você não é obrigado a acreditar, e eu não vou colocar informações pessoais mais detalhadas pra não levar doxxing):
 
 1. Estudei engenharia mecânica (até hoje não formei) e consegui estágio em uma consultoria brasileira com mais foco em análise de dados.
-2. Fui efetivado no estágio depois de um ano, fiquei mais uns 10 meses e fui pra outra consultoria.
-3. Depois de um ano e meio nessa outra consultoria, consegui meu primeiro contrato pra uma startup americana (**5k USD/mês**), e segui tocando os dois.
-4. 7 meses depois, consegui meu segundo contrato pra gringa, dessa vez uma consultoria (**mais 5k USD/mês**). Larguei a CLT e foquei nos dois contratos pra gringa.
-5. Assim fiquei, ganhando um total de **10k USD/mês** durante um ano e um mês, quando fui de Vasco nas duas, com duas semanas de distância uma da outra.
-6. Fiquei três meses desempregado, e consegui um outro contrato de **5k USD/mês**, em outra startup, que é o meu melhor emprego até agora.
-7. Consegui outro contrato dois meses depois, dessa vez um pouco menor (**3k USD/mês**).
+2. Fui efetivado no estágio, fiquei mais um tempo e fui pra outra consultoria.
+3. Depois de um tempo nessa outra consultoria, consegui meu primeiro contrato pra uma startup americana (**5k USD/mês**), e segui tocando os dois.
+4. Alguns meses depois, consegui meu segundo contrato pra gringa, dessa vez uma consultoria (**mais 5k USD/mês**). Larguei a CLT e foquei nos dois contratos pra gringa.
+5. Assim fiquei, ganhando um total de **10k USD/mês** por mais de um ano, quando fui de Vasco nas duas, praticamente ao mesmo tempo.
+6. Fiquei uns meses desempregado, e consegui um outro contrato de **5k USD/mês**, em outra startup, que é o meu melhor emprego até agora.
+7. Pouco tempo depois, consegui outro contrato, dessa vez um pouco menor (**3k USD/mês**).
 
 Tenho certeza de que tem muitos outros que são muito mais qualificados do que eu pra falar sobre esse assunto, e justamente por isso essa plataforma é aberta para compartilhamentos.
 

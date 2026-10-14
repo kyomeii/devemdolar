@@ -9,15 +9,15 @@ Este contenido está pensado para profesionales que **ya tienen experiencia en t
 
 ## Quién soy yo
 
-De contexto: trabajo para el extranjero desde mayo de 2024. Soy brasileño y mi trayectoria fue esta (no estás obligado a creerme, y no voy a poner datos personales más detallados para que no me doxeen):
+De contexto: trabajo para el extranjero desde 2024. Soy brasileño y mi trayectoria fue esta (no estás obligado a creerme, y no voy a poner datos personales más detallados para que no me doxeen):
 
 1. Estudié ingeniería mecánica (a la fecha no me he titulado) y conseguí unas prácticas en una consultora brasileña enfocada más que nada en análisis de datos.
-2. Me contrataron de planta después de un año, me quedé unos 10 meses más y me fui a otra consultora.
-3. Después de año y medio en esa otra consultora, conseguí mi primer contrato con una startup gringa (**5k USD/mes**), y seguí con los dos trabajos al mismo tiempo.
-4. 7 meses después, conseguí mi segundo contrato gringo, esta vez con una consultora (**otros 5k USD/mes**). Renuncié a mi trabajo formal en Brasil y me enfoqué en los dos contratos de afuera.
-5. Así me quedé, ganando un total de **10k USD/mes** durante un año y un mes, hasta que me mandaron a la goma de los dos, con dos semanas de diferencia entre uno y otro.
-6. Estuve tres meses desempleado, y conseguí otro contrato de **5k USD/mes**, en otra startup, que es mi mejor trabajo hasta ahora.
-7. Conseguí otro contrato dos meses después, esta vez un poco menor (**3k USD/mes**).
+2. Me contrataron de planta, me quedé un tiempo más y me fui a otra consultora.
+3. Después de un tiempo en esa otra consultora, conseguí mi primer contrato con una startup gringa (**5k USD/mes**), y seguí con los dos trabajos al mismo tiempo.
+4. Unos meses después, conseguí mi segundo contrato gringo, esta vez con una consultora (**otros 5k USD/mes**). Renuncié a mi trabajo formal en Brasil y me enfoqué en los dos contratos de afuera.
+5. Así me quedé, ganando un total de **10k USD/mes** por más de un año, hasta que me mandaron a la goma de los dos, prácticamente al mismo tiempo.
+6. Estuve unos meses desempleado, y conseguí otro contrato de **5k USD/mes**, en otra startup, que es mi mejor trabajo hasta ahora.
+7. Poco tiempo después, conseguí otro contrato, esta vez un poco menor (**3k USD/mes**).
 
 Estoy seguro de que hay muchos otros mucho más calificados que yo para hablar de este tema, y justamente por eso esta plataforma está abierta para que todos compartan.
 

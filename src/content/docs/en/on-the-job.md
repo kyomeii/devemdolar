@@ -3,7 +3,7 @@ title: On the job
 description: CNPJ, taxes, getting paid, emergency fund, remote communication, and overemployment.
 ---
 
-Congrats, you made it. Now the mission is different: **don't fuck it up**, get paid properly, pay less tax (legally), and prepare for the day everything goes to shit. Because it will. I got canned from two contracts two weeks apart, and the only thing that saved me was having money saved up.
+Congrats, you made it. Now the mission is different: **don't fuck it up**, get paid properly, pay less tax (legally), and prepare for the day everything goes to shit. Because it will. I got canned from two contracts at practically the same time, and the only thing that saved me was having money saved up.
 
 ## Bureaucracy: how to get paid
 

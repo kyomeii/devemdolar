@@ -3,7 +3,7 @@ title: No trabalho
 description: CNPJ, impostos, como receber, reserva de emergência, comunicação remota e overemployment.
 ---
 
-Parabéns, você conseguiu. Agora a missão é outra: **não fazer merda**, receber direito, pagar menos imposto (legalmente) e se preparar pro dia em que tudo der errado. Porque vai dar. Eu fui de Vasco em dois contratos com duas semanas de diferença, e a única coisa que me salvou foi ter dinheiro guardado.
+Parabéns, você conseguiu. Agora a missão é outra: **não fazer merda**, receber direito, pagar menos imposto (legalmente) e se preparar pro dia em que tudo der errado. Porque vai dar. Eu fui de Vasco em dois contratos praticamente ao mesmo tempo, e a única coisa que me salvou foi ter dinheiro guardado.
 
 ## Burocracia: como receber
 

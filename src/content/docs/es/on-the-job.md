@@ -3,7 +3,7 @@ title: En el trabajo
 description: Impuestos, cómo cobrar, fondo de emergencia, comunicación remota y overemployment.
 ---
 
-Felicidades, lo lograste. Ahora la misión es otra: **no cagarla**, cobrar bien, pagar menos impuestos (legalmente) y prepararte para el día en que todo se vaya a la mierda. Porque va a pasar. A mí me mandaron a la goma de dos contratos con dos semanas de diferencia, y lo único que me salvó fue tener dinero ahorrado.
+Felicidades, lo lograste. Ahora la misión es otra: **no cagarla**, cobrar bien, pagar menos impuestos (legalmente) y prepararte para el día en que todo se vaya a la mierda. Porque va a pasar. A mí me mandaron a la goma de dos contratos prácticamente al mismo tiempo, y lo único que me salvó fue tener dinero ahorrado.
 
 ## Burocracia: cómo cobrar
 

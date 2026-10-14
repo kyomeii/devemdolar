@@ -1,0 +1,215 @@
+---
+// Calculadora "salário em real vs. contrato gringo". Busca o câmbio do dia
+// no navegador, e usa um valor fixo se a API estiver fora do ar.
+interface Props {
+	title: string;
+	inputLabel: string;
+	yourSalary: string;
+	contractLabel: string;
+	multiplierLabel: string;
+	rateLabel: string;
+	locale: string;
+	/** Moeda inicial: BRL, MXN, ARS, COP, CLP ou PEN */
+	currency?: string;
+}
+const { title, inputLabel, yourSalary, contractLabel, multiplierLabel, rateLabel, locale, currency = 'BRL' } =
+	Astro.props;
+const currencies = ['BRL', 'MXN', 'ARS', 'COP', 'CLP', 'PEN'];
+---
+
+<section class="converter not-content" data-locale={locale} data-currency={currency}>
+	<h2>{title}</h2>
+	<label class="conv-input">
+		<span>{inputLabel}</span>
+		<div class="conv-field">
+			<select class="conv-currency" aria-label="Currency">
+				{currencies.map((c) => <option value={c} selected={c === currency}>{c}</option>)}
+			</select>
+			<input type="number" inputmode="numeric" min="0" aria-label={inputLabel} />
+		</div>
+	</label>
+	<div class="conv-results">
+		<div class="conv-card">
+			<span class="conv-label">{yourSalary}</span>
+			<strong class="conv-value" data-out="usd">—</strong>
+		</div>
+		<div class="conv-card conv-card--hl">
+			<span class="conv-label">{contractLabel}</span>
+			<strong class="conv-value" data-out="brl">—</strong>
+		</div>
+		<div class="conv-card">
+			<span class="conv-label">{multiplierLabel}</span>
+			<strong class="conv-value" data-out="mult">—</strong>
+		</div>
+	</div>
+	<p class="conv-rate">{rateLabel} <span data-out="rate">—</span></p>
+</section>
+
+<script>
+	// Câmbio aproximado (moeda local por 1 USD), usado se a API falhar,
+	// e um salário de exemplo de sênior local pra cada moeda.
+	const FALLBACK: Record<string, { rate: number; sample: number }> = {
+		BRL: { rate: 5.5, sample: 6000 },
+		MXN: { rate: 18.5, sample: 35000 },
+		ARS: { rate: 1400, sample: 1500000 },
+		COP: { rate: 4000, sample: 6000000 },
+		CLP: { rate: 950, sample: 1500000 },
+		PEN: { rate: 3.7, sample: 5000 },
+	};
+	const CONTRACT_USD = 5000;
+
+	document.querySelectorAll<HTMLElement>('.converter').forEach(async (root) => {
+		const locale = root.dataset.locale || 'pt-BR';
+		const input = root.querySelector('input')!;
+		const select = root.querySelector('select')!;
+		const out = (k: string) => root.querySelector<HTMLElement>(`[data-out="${k}"]`)!;
+		const money = (currency: string, v: number) =>
+			new Intl.NumberFormat(locale, { style: 'currency', currency, maximumFractionDigits: 0 }).format(v);
+		let rates: Record<string, number> = {};
+
+		const rateFor = (c: string) => rates[c] ?? FALLBACK[c].rate;
+		const render = () => {
+			const c = select.value;
+			const rate = rateFor(c);
+			const salary = Math.max(0, Number(input.value) || 0);
+			const contractLocal = CONTRACT_USD * rate;
+			out('usd').textContent = money('USD', salary / rate);
+			out('brl').textContent = money(c, contractLocal);
+			out('mult').textContent = salary > 0 ? `${(contractLocal / salary).toFixed(1)}×` : '∞';
+			out('rate').textContent = `US$ 1 = ${rate.toLocaleString(locale, { maximumFractionDigits: 2 })} ${c}`;
+		};
+
+		input.value = String(FALLBACK[select.value].sample);
+		input.addEventListener('input', render);
+		select.addEventListener('change', () => {
+			input.value = String(FALLBACK[select.value].sample);
+			render();
+		});
+		render();
+
+		try {
+			const res = await fetch('https://open.er-api.com/v6/latest/USD');
+			const data = await res.json();
+			if (data?.rates) {
+				rates = data.rates;
+				render();
+			}
+		} catch {
+			/* sem internet ou API fora: segue com o valor fixo */
+		}
+	});
+</script>
+
+<style>
+	.converter {
+		border-radius: 1.25rem;
+		padding: clamp(1.25rem, 4vw, 2.25rem);
+		background: var(--gringa-green-900);
+		color: var(--gringa-cream);
+		position: relative;
+		overflow: hidden;
+	}
+	.converter::after {
+		content: '';
+		position: absolute;
+		inset: auto -4rem -6rem auto;
+		width: 16rem;
+		height: 16rem;
+		border-radius: 50%;
+		background: var(--gringa-lime);
+		opacity: 0.12;
+		pointer-events: none;
+	}
+	.converter h2 {
+		font-family: var(--gringa-font-display);
+		font-size: clamp(1.4rem, 3vw, 2rem);
+		margin: 0 0 1.25rem;
+		color: var(--gringa-cream);
+		line-height: 1.15;
+	}
+	.conv-input {
+		display: block;
+		margin-bottom: 1.25rem;
+	}
+	.conv-input > span {
+		display: block;
+		font-size: var(--sl-text-sm);
+		opacity: 0.8;
+		margin-bottom: 0.4rem;
+	}
+	.conv-field {
+		display: inline-flex;
+		align-items: center;
+		background: rgba(244, 239, 227, 0.08);
+		border: 1px solid rgba(244, 239, 227, 0.25);
+		border-radius: 0.75rem;
+		padding: 0 0.9rem;
+		max-width: 100%;
+	}
+	.conv-field:focus-within {
+		border-color: var(--gringa-lime);
+	}
+	.conv-currency {
+		font: inherit;
+		font-family: var(--sl-font-mono);
+		font-size: var(--sl-text-sm);
+		color: var(--gringa-cream);
+		background: transparent;
+		border: none;
+		border-inline-end: 1px solid rgba(244, 239, 227, 0.25);
+		padding: 0.4rem 0.5rem 0.4rem 0;
+		cursor: pointer;
+	}
+	.conv-currency option {
+		color: #0b1a12;
+	}
+	.conv-field input {
+		font: inherit;
+		font-family: var(--gringa-font-display);
+		font-size: 1.6rem;
+		font-weight: 700;
+		color: var(--gringa-cream);
+		background: transparent;
+		border: none;
+		outline: none;
+		width: 11ch;
+		padding: 0.45rem 0.5rem;
+	}
+	.conv-results {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+		gap: 0.75rem;
+		position: relative;
+		z-index: 1;
+	}
+	.conv-card {
+		border-radius: 0.9rem;
+		padding: 0.9rem 1rem;
+		background: rgba(244, 239, 227, 0.06);
+		border: 1px solid rgba(244, 239, 227, 0.12);
+	}
+	.conv-card--hl {
+		background: var(--gringa-lime);
+		color: var(--gringa-green-900);
+		border-color: transparent;
+	}
+	.conv-label {
+		display: block;
+		font-size: var(--sl-text-xs);
+		line-height: 1.35;
+		opacity: 0.85;
+		margin-bottom: 0.35rem;
+	}
+	.conv-value {
+		font-family: var(--gringa-font-display);
+		font-size: 1.6rem;
+		line-height: 1.1;
+	}
+	.conv-rate {
+		margin: 1rem 0 0;
+		font-size: var(--sl-text-xs);
+		opacity: 0.6;
+		position: relative;
+		z-index: 1;
+	}
+</style>

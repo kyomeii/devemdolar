@@ -1,0 +1,30 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+
+const labels: Record<string, { license: string; support: string }> = {
+	pt: { license: 'Conteúdo sob CC BY-SA 4.0 · Feito pela comunidade, sem curso nem mentoria.', support: 'Apoie' },
+	es: { license: 'Contenido bajo CC BY-SA 4.0 · Hecho por la comunidad, sin cursos ni mentorías.', support: 'Apoya' },
+	en: { license: 'Content under CC BY-SA 4.0 · Made by the community, no courses, no mentoring.', support: 'Support' },
+};
+const locale = Astro.locals.starlightRoute.locale ?? 'pt';
+const t = labels[locale] ?? labels.pt;
+---
+
+<Default />
+<p class="gringa-footer">
+	{t.license} <a href={`/${locale}/support/`}>{t.support}</a>
+</p>
+
+<style>
+	.gringa-footer {
+		margin-top: 2rem;
+		padding-top: 1.25rem;
+		border-top: 1px solid var(--sl-color-gray-6);
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-gray-3);
+		text-align: center;
+	}
+	.gringa-footer a {
+		color: var(--sl-color-text-accent);
+	}
+</style>

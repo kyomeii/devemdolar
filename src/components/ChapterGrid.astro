@@ -1,0 +1,124 @@
+---
+import { Image } from 'astro:assets';
+import manifesto from '../assets/chapters/manifesto.webp';
+import english from '../assets/chapters/english.webp';
+import technical from '../assets/chapters/technical.webp';
+import resume from '../assets/chapters/resume.webp';
+import linkedin from '../assets/chapters/linkedin.webp';
+import jobHunting from '../assets/chapters/job-hunting.webp';
+import interview from '../assets/chapters/interview.webp';
+import onTheJob from '../assets/chapters/on-the-job.webp';
+
+const images: Record<string, ImageMetadata> = {
+	manifesto,
+	english,
+	technical,
+	resume,
+	linkedin,
+	'job-hunting': jobHunting,
+	interview,
+	'on-the-job': onTheJob,
+};
+
+interface Props {
+	lang: string;
+	chapters: { slug: string; title: string; desc: string }[];
+}
+const { lang, chapters } = Astro.props;
+---
+
+<ol class="chapters not-content">
+	{
+		chapters.map((c, i) => (
+			<li>
+				<a class="chapter" href={`/${lang}/${c.slug}/`}>
+					<div class="chapter-art">
+						<Image src={images[c.slug]} alt="" width={480} height={480} loading="lazy" />
+					</div>
+					<div class="chapter-body">
+						<span class="chapter-n">{String(i).padStart(2, '0')}</span>
+						<h3>{c.title}</h3>
+						<p>{c.desc}</p>
+					</div>
+				</a>
+			</li>
+		))
+	}
+</ol>
+
+<style>
+	.chapters {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+		gap: 1rem;
+	}
+	.chapter {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		text-decoration: none;
+		color: inherit;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 1rem;
+		overflow: hidden;
+		background: var(--sl-color-bg-nav);
+		transition:
+			transform 0.18s ease,
+			border-color 0.18s ease,
+			box-shadow 0.18s ease;
+	}
+	.chapter:hover,
+	.chapter:focus-visible {
+		transform: translateY(-3px);
+		border-color: var(--sl-color-accent);
+		box-shadow: 0 10px 30px -12px var(--gringa-shadow);
+	}
+	.chapter-art {
+		background: #f4efe3;
+		aspect-ratio: 4 / 3;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.chapter-art img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transform: scale(1.02);
+		transition: transform 0.3s ease;
+	}
+	.chapter:hover .chapter-art img {
+		transform: scale(1.08);
+	}
+	.chapter-body {
+		padding: 1rem 1.15rem 1.25rem;
+	}
+	.chapter-n {
+		font-family: var(--sl-font-mono);
+		font-size: var(--sl-text-xs);
+		color: var(--sl-color-text-accent);
+		letter-spacing: 0.08em;
+	}
+	.chapter h3 {
+		font-family: var(--gringa-font-display);
+		font-size: var(--sl-text-xl);
+		margin: 0.15rem 0 0.35rem;
+		color: var(--sl-color-white);
+	}
+	.chapter p {
+		margin: 0;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-2);
+		line-height: 1.5;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.chapter,
+		.chapter-art img {
+			transition: none;
+		}
+	}
+</style>

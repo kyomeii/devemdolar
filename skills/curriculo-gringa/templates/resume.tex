@@ -1,0 +1,67 @@
+% Currículo gringa - template LaTeX simples, uma coluna, amigável pra ATS.
+% Compile de graça em https://www.overleaf.com (New Project > Upload Project).
+\documentclass[letterpaper,10.5pt]{article}
+
+\usepackage[margin=0.6in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\pdfgentounicode=1 % deixa o texto do PDF legível pro ATS
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, topsep=2pt, parsep=0pt}
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+\newcommand{\job}[4]{%
+  \textbf{#1} \hfill #3\\
+  \textit{#2} \hfill \textit{#4}\\[-6pt]}
+
+\begin{document}
+
+% ---------- Cabeçalho ----------
+\begin{center}
+  {\LARGE\bfseries Your Name}\\[3pt]
+  +55 11 90000-0000 \;|\;
+  \href{mailto:you@email.com}{you@email.com} \;|\;
+  \href{https://linkedin.com/in/you}{linkedin.com/in/you} \;|\;
+  \href{https://github.com/you}{github.com/you}
+\end{center}
+
+% ---------- Título e resumo ----------
+\section*{Analytics Engineer}
+Analytics Engineer with 6 years of experience building data models, pipelines and BI solutions for US and Brazilian companies. Specialized in turning messy data into reliable, self-service analytics with Power BI, SQL, dbt and Snowflake.
+
+% ---------- Experiência ----------
+\section*{Experience}
+
+\job{Company Name}{Analytics Engineer}{Remote}{Mar 2024 -- Present}
+\begin{itemize}
+  \item Built 12 Power BI dashboards on sales and churn used daily by 40+ managers, cutting ad-hoc report requests by 60\%.
+  \item Optimized a Databricks pipeline from 67 to 5 minutes of runtime, reducing cloud cost per run from \$420 to \$10.
+  \item Modeled a dimensional data warehouse in Snowflake with dbt, consolidating 9 sources into a single source of truth.
+\end{itemize}
+
+\job{Previous Company}{Data Analyst}{São Paulo, Brazil}{Jan 2021 -- Feb 2024}
+\begin{itemize}
+  \item Automated monthly financial reporting with Python and SQL, saving 30 hours of manual work per month.
+  \item Led the migration of 50+ Excel reports to Power BI, adopted by 5 business units.
+\end{itemize}
+
+% ---------- Skills ----------
+\section*{Skills}
+\textbf{Languages:} SQL, Python, DAX\\
+\textbf{Data:} dbt, Snowflake, Databricks, Spark, Data Modeling (Kimball)\\
+\textbf{BI:} Power BI, Tableau\\
+\textbf{Tools:} Git, Airflow, Azure DevOps
+
+% ---------- Educação ----------
+\section*{Education}
+\textbf{University Name} \hfill 2015 -- 2020\\
+B.Sc. in Mechanical Engineering
+
+\end{document}

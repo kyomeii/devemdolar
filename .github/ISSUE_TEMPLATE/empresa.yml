@@ -1,0 +1,49 @@
+name: Sugerir empresa / Sugerir empresa / Suggest a company
+description: Uma empresa, consultoria ou agência que contrata brasileiros ou latinos remotamente.
+title: "[Empresa] "
+labels: ["empresa"]
+body:
+  - type: input
+    id: nome
+    attributes:
+      label: Nome da empresa
+    validations:
+      required: true
+  - type: input
+    id: site
+    attributes:
+      label: Site ou página de vagas
+    validations:
+      required: true
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo
+      options:
+        - Empresa contratando direto
+        - Consultoria / nearshore
+        - Agência de recrutamento
+        - Plataforma de talentos
+    validations:
+      required: true
+  - type: input
+    id: areas
+    attributes:
+      label: Áreas / stacks que contrata
+      placeholder: "Dados, backend, QA"
+  - type: dropdown
+    id: fonte
+    attributes:
+      label: Como você sabe que contrata brasileiros?
+      options:
+        - Trabalho / trabalhei lá
+        - Fiz processo seletivo
+        - Conheço alguém que trabalha lá
+        - Vi na vaga
+    validations:
+      required: true
+  - type: textarea
+    id: obs
+    attributes:
+      label: Observações
+      description: Como é o processo, como pagam, se é contractor, etc.

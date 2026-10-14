@@ -1,0 +1,73 @@
+---
+title: Gringa — deja de cobrar en shitcoin
+description: Guía gratuita, open source y sin choro de coach para que profesionales de tecnología trabajen remoto para afuera cobrando en dólares o euros.
+template: splash
+hero:
+  title: Deja de cobrar en <em>shitcoin</em>.
+  tagline: La guía gratuita, open source y sin choro de coach para que profesionales de tecnología latinoamericanos trabajen remoto para el extranjero, cobrando en dólares o euros.
+  image:
+    html: '<img src="/hero.webp" width="1168" height="880" alt="Ilustración de un dev trabajando en la laptop de noche, con vista al Pan de Azúcar, y un avioncito de papel hecho con un billete de dólar volando por la ventana." />'
+  actions:
+    - text: Empieza por el manifiesto
+      link: /es/manifesto/
+      icon: right-arrow
+    - text: Ver en GitHub
+      link: /es/contribute/
+      icon: github
+      variant: minimal
+---
+
+import ChapterGrid from '../../../components/ChapterGrid.astro';
+import Converter from '../../../components/Converter.astro';
+
+<div class="home-stats not-content">
+	<div><strong>US$ 10k</strong><span>al mes, lo que llegué a ganar con dos contratos</span></div>
+	<div><strong>$ 0</strong><span>lo que cuesta esta guía. Y lo que debería costar cualquier mentoría que no deberías comprar</span></div>
+	<div><strong>8</strong><span>capítulos, desde el inglés hasta cómo no cagarla en el trabajo</span></div>
+	<div><strong>3</strong><span>idiomas, mantenido por la comunidad</span></div>
+</div>
+
+<section class="home-section not-content">
+	<h2>La guía</h2>
+	<p>En orden. Saltarte pasos es la forma más rápida de comerte 200 "unfortunately" seguidos.</p>
+	<ChapterGrid
+		lang="es"
+		chapters={[
+			{ slug: 'manifesto', title: 'Manifiesto', desc: 'Por qué existe este sitio y por qué no necesitas pagar ninguna mentoría.' },
+			{ slug: 'english', title: 'Inglés', desc: 'Sin inglés ni empieces. Inmersión, shadowing y dónde practicar.' },
+			{ slug: 'technical', title: 'Técnico', desc: 'Domina tu stack. Lo que importa en la era de la IA, y los libros.' },
+			{ slug: 'resume', title: 'Currículum', desc: 'Pasa el ATS, ponle métricas a todo, miente con conciencia.' },
+			{ slug: 'linkedin', title: 'LinkedIn', desc: 'Conexiones, LIONs, 500+ y el algoritmo trabajando para ti.' },
+			{ slug: 'job-hunting', title: 'Buscar vacantes', desc: 'Búsqueda booleana, Posts, site: en Google y HiringCafe.' },
+			{ slug: 'interview', title: 'Entrevista', desc: 'STAR, live coding, salario en dólares, y las estafas.' },
+			{ slug: 'on-the-job', title: 'En el trabajo', desc: 'Impuestos, tipo de cambio, husos horarios, y cómo no que te corran.' },
+		]}
+	/>
+</section>
+
+<section class="home-section not-content">
+	<Converter
+		locale="es"
+		currency="MXN"
+		title="¿Cuánto estás dejando sobre la mesa?"
+		inputLabel="Tu salario bruto mensual hoy"
+		yourSalary="Tu salario, en dólares"
+		contractLabel="Un contrato gringo normalito (US$ 5k/mes), en tu moneda"
+		multiplierLabel="Cuántas veces más"
+		rateLabel="Tipo de cambio de hoy:"
+	/>
+</section>
+
+<section class="home-section not-content">
+	<p class="home-quote">"El no ya lo tengo, voy por la humillación."</p>
+</section>
+
+<section class="home-section not-content">
+	<h2>Es open source. Métele mano.</h2>
+	<p>Este sitio lo hace gente que trabaja para afuera, no vendedores de cursos. ¿Encontraste algo mal? ¿Tienes una historia? Contribuye.</p>
+	<div class="home-cta">
+		<a href="/es/stories/"><strong>Manda tu historia →</strong>Cuenta cómo lo lograste. Puede ser anónimo.</a>
+		<a href="/es/companies/"><strong>Recomienda empresas →</strong>Quién contrata latinos remotos de verdad.</a>
+		<a href="/es/contribute/"><strong>Corrige y mejora →</strong>Cada texto tiene un botón de "Editar página".</a>
+	</div>
+</section>

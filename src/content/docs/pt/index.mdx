@@ -1,0 +1,72 @@
+---
+title: Gringa — pare de ganhar em shitcoin
+description: Guia gratuito, open source e sem papo de coach pra profissional de tecnologia trabalhar remoto pra fora ganhando em dólar ou euro.
+template: splash
+hero:
+  title: Pare de ganhar em <em>shitcoin</em>.
+  tagline: O guia gratuito, open source e sem papo de coach pra profissional de tecnologia brasileiro trabalhar remoto pra gringa, ganhando em dólar ou euro.
+  image:
+    html: '<img src="/hero.webp" width="1168" height="880" alt="Ilustração de um dev trabalhando no notebook à noite, com vista pro Pão de Açúcar, e um aviãozinho de papel feito de nota de dólar voando pela janela." />'
+  actions:
+    - text: Começa pelo manifesto
+      link: /pt/manifesto/
+      icon: right-arrow
+    - text: Ver no GitHub
+      link: /pt/contribute/
+      icon: github
+      variant: minimal
+---
+
+import ChapterGrid from '../../../components/ChapterGrid.astro';
+import Converter from '../../../components/Converter.astro';
+
+<div class="home-stats not-content">
+	<div><strong>US$ 10k</strong><span>por mês, o que eu cheguei a ganhar com dois contratos</span></div>
+	<div><strong>R$ 0</strong><span>o custo desse guia. E de qualquer mentoria que você não deveria comprar</span></div>
+	<div><strong>8</strong><span>capítulos, do inglês até não fazer merda no trabalho</span></div>
+	<div><strong>3</strong><span>idiomas, mantido pela comunidade</span></div>
+</div>
+
+<section class="home-section not-content">
+	<h2>O guia</h2>
+	<p>Na ordem. Pular etapa é o jeito mais rápido de tomar 200 "unfortunately" seguidos.</p>
+	<ChapterGrid
+		lang="pt"
+		chapters={[
+			{ slug: 'manifesto', title: 'Manifesto', desc: 'Por que esse site existe e por que você não precisa pagar mentoria.' },
+			{ slug: 'english', title: 'Inglês', desc: 'Sem inglês nem começa. Imersão, shadowing e onde treinar.' },
+			{ slug: 'technical', title: 'Técnica', desc: 'Domine sua stack. O que importa na era da IA, e os livros.' },
+			{ slug: 'resume', title: 'Currículo', desc: 'Passe no ATS, coloque métrica em tudo, minta com consciência.' },
+			{ slug: 'linkedin', title: 'LinkedIn', desc: 'Conexões, LIONs, 500+ e o algoritmo trabalhando pra você.' },
+			{ slug: 'job-hunting', title: 'Procurar vagas', desc: 'Pesquisa booleana, Posts, site: no Google e HiringCafe.' },
+			{ slug: 'interview', title: 'Entrevista', desc: 'STAR, live coding, salário em dólar, e os golpes.' },
+			{ slug: 'on-the-job', title: 'No trabalho', desc: 'CNPJ, impostos, câmbio, fuso, e como não ser demitido.' },
+		]}
+	/>
+</section>
+
+<section class="home-section not-content">
+	<Converter
+		locale="pt-BR"
+		title="Quanto você tá deixando na mesa?"
+		inputLabel="Seu salário bruto mensal hoje"
+		yourSalary="Seu salário, em dólar"
+		contractLabel="Um contrato gringo comum (US$ 5k/mês), na sua moeda"
+		multiplierLabel="Quantas vezes mais"
+		rateLabel="Câmbio de hoje:"
+	/>
+</section>
+
+<section class="home-section not-content">
+	<p class="home-quote">"O não eu já tenho, vou em busca da humilhação."</p>
+</section>
+
+<section class="home-section not-content">
+	<h2>É open source. Bota a mão.</h2>
+	<p>Esse site é feito por gente que trabalha pra fora, não por vendedor de curso. Achou algo errado? Tem um relato? Contribua.</p>
+	<div class="home-cta">
+		<a href="/pt/stories/"><strong>Mande seu relato →</strong>Conte como você conseguiu. Pode ser anônimo.</a>
+		<a href="/pt/companies/"><strong>Indique empresas →</strong>Quem contrata brasileiro remoto de verdade.</a>
+		<a href="/pt/contribute/"><strong>Corrija e melhore →</strong>Todo texto tem um botão de "Editar página".</a>
+	</div>
+</section>

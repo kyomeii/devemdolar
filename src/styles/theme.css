@@ -1,0 +1,225 @@
+/* ---------------------------------------------------------------
+   Gringa — tema visual
+   Verde-esmeralda + verde-limão + creme. Dark é o padrão.
+   --------------------------------------------------------------- */
+
+:root {
+	--gringa-green-900: #0b3d2e;
+	--gringa-green-700: #0f5a43;
+	--gringa-lime: #c6f432;
+	--gringa-cream: #f4efe3;
+	--gringa-font-display: 'Space Grotesk Variable', 'Inter Variable', system-ui, sans-serif;
+	--gringa-shadow: rgba(0, 0, 0, 0.6);
+
+	--sl-font: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+	--sl-font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', monospace;
+
+	/* Dark (padrão) */
+	--sl-color-accent-low: #23380a;
+	--sl-color-accent: #c6f432;
+	--sl-color-accent-high: #e4ff9a;
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #eaf1ec;
+	--sl-color-gray-2: #c3d0c7;
+	--sl-color-gray-3: #8da297;
+	--sl-color-gray-4: #587064;
+	--sl-color-gray-5: #2f4539;
+	--sl-color-gray-6: #172820;
+	--sl-color-black: #0a1611;
+}
+
+:root[data-theme='light'] {
+	--gringa-shadow: rgba(11, 61, 46, 0.25);
+
+	--sl-color-accent-low: #e3f7b5;
+	--sl-color-accent: #0f6b4c;
+	--sl-color-accent-high: #0b3d2e;
+	--sl-color-white: #0b1a12;
+	--sl-color-gray-1: #18291f;
+	--sl-color-gray-2: #2f4539;
+	--sl-color-gray-3: #52685b;
+	--sl-color-gray-4: #8da297;
+	--sl-color-gray-5: #cdd8cf;
+	--sl-color-gray-6: #ebefe6;
+	--sl-color-gray-7: #f5f3ec;
+	--sl-color-black: #fbf9f3;
+}
+
+/* Tipografia --------------------------------------------------- */
+
+.sl-markdown-content :is(h1, h2, h3, h4),
+h1#_top,
+.site-title {
+	font-family: var(--gringa-font-display);
+	letter-spacing: -0.015em;
+}
+
+h1#_top {
+	font-weight: 700;
+}
+
+.sl-markdown-content h2 {
+	font-weight: 700;
+}
+
+.site-title img {
+	height: 2rem;
+	width: auto;
+}
+
+/* Links no texto: sublinhado grossinho na cor de destaque */
+.sl-markdown-content a:not(:where(.not-content *)) {
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
+	text-decoration-color: color-mix(in srgb, var(--sl-color-text-accent) 45%, transparent);
+}
+.sl-markdown-content a:not(:where(.not-content *)):hover {
+	text-decoration-color: var(--sl-color-text-accent);
+}
+
+/* Destaques em negrito ganham um marca-texto sutil */
+.sl-markdown-content strong {
+	color: var(--sl-color-white);
+}
+
+/* Tabelas mais legíveis */
+.sl-markdown-content table {
+	font-size: var(--sl-text-sm);
+}
+.sl-markdown-content th {
+	font-family: var(--gringa-font-display);
+	background: var(--sl-color-gray-6);
+}
+
+/* Citação: estilo "frase de efeito" */
+.sl-markdown-content blockquote {
+	border-inline-start: 4px solid var(--sl-color-accent);
+	background: var(--sl-color-accent-low);
+	padding: 0.75rem 1rem;
+	border-radius: 0 0.5rem 0.5rem 0;
+	font-style: normal;
+}
+.sl-markdown-content blockquote p {
+	color: var(--sl-color-white);
+}
+
+/* Home: hero --------------------------------------------------- */
+
+.hero {
+	padding-block: clamp(1.5rem, 6vw, 4rem) clamp(1rem, 4vw, 2.5rem);
+	gap: clamp(1.5rem, 4vw, 3rem);
+}
+.hero-html {
+	justify-content: center;
+}
+.hero-html img {
+	width: 100%;
+	max-width: 38rem;
+	height: auto;
+	border-radius: 1.25rem;
+	box-shadow: 0 30px 60px -30px var(--gringa-shadow);
+}
+.hero h1 {
+	font-family: var(--gringa-font-display);
+	font-size: clamp(2.4rem, 6vw, 4.2rem);
+	line-height: 1.02;
+	letter-spacing: -0.03em;
+	font-weight: 700;
+}
+.hero h1 em {
+	font-style: normal;
+	color: var(--sl-color-text-accent);
+}
+.hero .tagline {
+	font-size: clamp(1.05rem, 2vw, 1.3rem);
+	color: var(--sl-color-gray-2);
+	max-width: 34rem;
+}
+@media (min-width: 50rem) {
+	.hero {
+		grid-template-columns: 6fr 5fr;
+	}
+}
+
+/* Home: blocos ------------------------------------------------- */
+
+.home-stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	gap: 1px;
+	background: var(--sl-color-gray-5);
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 1rem;
+	overflow: hidden;
+	margin-block: 0 3.5rem;
+}
+.home-stats > div {
+	background: var(--sl-color-black);
+	padding: 1.25rem 1.25rem 1.1rem;
+}
+.home-stats strong {
+	display: block;
+	font-family: var(--gringa-font-display);
+	font-size: clamp(1.8rem, 4vw, 2.4rem);
+	line-height: 1;
+	color: var(--sl-color-text-accent);
+	margin-bottom: 0.4rem;
+}
+.home-stats span {
+	font-size: var(--sl-text-sm);
+	color: var(--sl-color-gray-3);
+}
+
+.home-section {
+	margin-block: 3.5rem;
+}
+.home-section > h2 {
+	font-family: var(--gringa-font-display);
+	font-size: clamp(1.6rem, 4vw, 2.4rem);
+	letter-spacing: -0.02em;
+	line-height: 1.1;
+	margin: 0 0 0.5rem;
+	color: var(--sl-color-white);
+}
+.home-section > p {
+	color: var(--sl-color-gray-2);
+	max-width: 42rem;
+	margin: 0 0 1.5rem;
+}
+
+.home-cta {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+	gap: 1rem;
+}
+.home-cta a {
+	display: block;
+	text-decoration: none;
+	padding: 1.4rem 1.5rem;
+	border-radius: 1rem;
+	border: 1px solid var(--sl-color-gray-5);
+	color: var(--sl-color-gray-2);
+	transition: border-color 0.18s ease;
+}
+.home-cta a:hover {
+	border-color: var(--sl-color-accent);
+}
+.home-cta a strong {
+	display: block;
+	font-family: var(--gringa-font-display);
+	font-size: var(--sl-text-xl);
+	color: var(--sl-color-white);
+	margin-bottom: 0.25rem;
+}
+
+.home-quote {
+	font-family: var(--gringa-font-display);
+	font-size: clamp(1.3rem, 3vw, 1.9rem);
+	line-height: 1.25;
+	letter-spacing: -0.01em;
+	color: var(--sl-color-white);
+	border-inline-start: 4px solid var(--sl-color-accent);
+	padding-inline-start: 1.25rem;
+	margin: 0;
+	max-width: 46rem;
+}

@@ -1,0 +1,18 @@
+---
+import { CONTACT_EMAIL } from '../config.mjs';
+
+interface Props {
+	emptyLabel: string;
+}
+const { emptyLabel } = Astro.props;
+---
+
+{
+	CONTACT_EMAIL ? (
+		<p>
+			<a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+		</p>
+	) : (
+		<p>{emptyLabel}</p>
+	)
+}

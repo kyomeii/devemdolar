@@ -1,0 +1,53 @@
+name: Novo relato / Nuevo relato / New story
+description: Conte como você conseguiu trabalhar pra fora. Pode ser anônimo.
+title: "[Relato] "
+labels: ["relato"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Valeu por compartilhar! Preencha o que quiser, nada é obrigatório além da história. Pode escrever em português, espanhol ou inglês.
+        **Não coloque nome de colega, gestor ou dado confidencial da empresa.**
+  - type: input
+    id: titulo
+    attributes:
+      label: Título do relato
+      placeholder: "De suporte técnico a backend na gringa em 3 anos"
+    validations:
+      required: true
+  - type: input
+    id: stack
+    attributes:
+      label: Área / stack
+      placeholder: "Backend, Node.js, AWS"
+  - type: input
+    id: anos
+    attributes:
+      label: Anos de experiência quando conseguiu
+  - type: dropdown
+    id: contrato
+    attributes:
+      label: Tipo de contrato
+      options:
+        - Contractor direto com a empresa
+        - Contractor via nearshore / consultoria / agência
+        - Via plataforma (Deel, Remote, etc.)
+        - CLT/Funcionário de empresa estrangeira com entidade no Brasil
+        - Outro
+  - type: input
+    id: salario
+    attributes:
+      label: Faixa salarial (opcional)
+      placeholder: "US$ 4–6k/mês"
+  - type: textarea
+    id: historia
+    attributes:
+      label: Sua história
+      description: Background, como achou a vaga, como foi o processo, o que deu errado, o que faria diferente.
+    validations:
+      required: true
+  - type: input
+    id: assinatura
+    attributes:
+      label: Como quer ser identificado (opcional)
+      placeholder: "Anônimo, apelido, ou link do LinkedIn"

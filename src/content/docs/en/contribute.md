@@ -1,0 +1,59 @@
+---
+title: How to contribute
+description: The site is open source. Fix, add, translate, or send your story.
+---
+
+This site is **open source**: all the content lives in a public GitHub repository, and anyone can suggest changes. Found something wrong, outdated, or have a better tip? Contribute.
+
+## The easy way (no Git knowledge needed)
+
+### Suggest a fix or addition to a page
+
+1. Create a [GitHub](https://github.com) account (it's free).
+2. At the bottom of any page on this site, click **"Edit page"**.
+3. GitHub will open the text file. Click the pencil and make your change.
+4. Click **"Commit changes…"** and then **"Propose changes"**, and write a quick note on what you changed and why.
+5. Done, that creates a *pull request*. Someone reviews it and, if it's all good, it goes on the site.
+
+### Send a story or suggest a company
+
+In the GitHub repository (icon up top, in the corner), go to **Issues → New issue** and pick the form:
+
+- **New story** — tell your story of how you landed a job working for a foreign company.
+- **Suggest a company** — a company, consulting firm, or agency that hires Brazilians.
+- **Fix** — something wrong or outdated that you don't want to edit yourself.
+
+## The hardcore way (you know Git)
+
+```bash
+git clone <url-do-repositório>
+cd gringa
+npm install
+npm run dev
+```
+
+The site runs at `http://localhost:4321`. The texts live in `src/content/docs/<language>/`. Fork it, create a branch, and send the pull request.
+
+## Translations
+
+The site exists in **Portuguese, Spanish, and English**. Portuguese is the original version. If you changed something in Portuguese and know Spanish or English, update the other versions too (or mention in the pull request that they need updating).
+
+The same file exists in each language, with the same name:
+
+```
+src/content/docs/pt/resume.md
+src/content/docs/es/resume.md
+src/content/docs/en/resume.md
+```
+
+## House rules
+
+- **Keep the tone.** The site is informal and kind of rude on purpose. No need to turn it into a LinkedIn article.
+- **No selling.** No affiliate links, courses, mentoring, or "DM me." PRs like that get closed on the spot.
+- **Source it when it's a fact.** Laws, taxes, studies, numbers: add the link.
+- **Books in English only.**
+- **Don't expose anyone.** No names of coworkers or managers, no confidential company data.
+
+## License
+
+The content is under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/): you can copy and adapt it, as long as you give credit and keep the same license. The site's code is under the MIT license.

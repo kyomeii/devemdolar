@@ -1,0 +1,21 @@
+name: Correção / Corrección / Correction
+description: Algo errado, desatualizado ou quebrado no site.
+title: "[Correção] "
+labels: ["correção"]
+body:
+  - type: input
+    id: pagina
+    attributes:
+      label: Link da página
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: O que está errado?
+    validations:
+      required: true
+  - type: textarea
+    id: fonte
+    attributes:
+      label: Fonte (se for fato, lei, número)

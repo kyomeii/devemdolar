@@ -38,6 +38,10 @@ npm run dev
 
 Relatos novos vão em `src/content/docs/pt/stories/<um-nome-curto>.md`. O modelo está na página [Relatos](src/content/docs/pt/stories.md). Pode ser anônimo.
 
+## Contato
+
+Pra parceria, sugestão ou algo que não cabe numa issue: **kyomei02@gmail.com**. Pra falha de segurança, use o [SECURITY.md](SECURITY.md).
+
 ## Licença
 
 Ao contribuir, você concorda que seu conteúdo será publicado sob [CC BY-SA 4.0](LICENSE-CONTENT.md) e seu código sob [MIT](LICENSE).

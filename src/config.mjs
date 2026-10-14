@@ -11,7 +11,7 @@ export const REPO_URL = 'https://github.com/kyomeii/devemdolar';
 
 // E-mail de contato pra propostas de propaganda/parceria. Deixe '' pra esconder.
 // Use um e-mail criado só pra isso, não o seu pessoal.
-export const CONTACT_EMAIL = '';
+export const CONTACT_EMAIL = 'kyomei02@gmail.com';
 
 // Carteiras pra doação em cripto. Deixe '' nas que você não usar.
 // Elas só aparecem no site quando estiverem preenchidas.

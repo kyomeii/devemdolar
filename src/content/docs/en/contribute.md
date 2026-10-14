@@ -27,7 +27,7 @@ In the GitHub repository (icon up top, in the corner), go to **Issues → New is
 
 ```bash
 git clone <url-do-repositório>
-cd gringa
+cd devemdolar
 npm install
 npm run dev
 ```

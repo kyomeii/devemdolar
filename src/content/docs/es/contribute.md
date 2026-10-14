@@ -27,7 +27,7 @@ En el repositorio de GitHub (el ícono de arriba, en la esquina), ve a **Issues 
 
 ```bash
 git clone <url-do-repositório>
-cd gringa
+cd devemdolar
 npm install
 npm run dev
 ```

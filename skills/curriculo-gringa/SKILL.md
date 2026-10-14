@@ -1,6 +1,6 @@
 ---
 name: curriculo-gringa
-description: Monta ou revisa um currículo em inglês no padrão das vagas remotas internacionais (EUA/Europa), otimizado pra passar em ATS, seguindo o guia Gringa. Use quando a pessoa pedir pra criar, melhorar, traduzir ou revisar um currículo/resume/CV pra vagas no exterior, ou disser que quer "trabalhar pra gringa". Gera LaTeX (pra compilar no Overleaf) ou Markdown.
+description: Monta ou revisa um currículo em inglês no padrão das vagas remotas internacionais (EUA/Europa), otimizado pra passar em ATS, seguindo o guia Dev em Dólar. Use quando a pessoa pedir pra criar, melhorar, traduzir ou revisar um currículo/resume/CV pra vagas no exterior, ou disser que quer "trabalhar pra gringa". Gera LaTeX (pra compilar no Overleaf) ou Markdown.
 ---
 
 # Currículo gringa

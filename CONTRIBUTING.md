@@ -14,8 +14,8 @@ Valeu por querer ajudar. Esse site só melhora com gente que já passou pelo pro
 ### 2. Sabendo Git
 
 ```bash
-git clone https://github.com/<seu-usuario>/gringa.git
-cd gringa
+git clone https://github.com/<seu-usuario>/devemdolar.git
+cd devemdolar
 npm install
 npm run dev
 ```

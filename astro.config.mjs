@@ -7,7 +7,7 @@ export default defineConfig({
 	site: SITE_URL,
 	integrations: [
 		starlight({
-			title: 'Gringa',
+			title: 'Dev em Dólar',
 			description:
 				'Guia gratuito, open source e sem papo de coach pra trabalhar remoto pra fora ganhando em dólar ou euro.',
 			logo: { src: './src/assets/logo.svg', replacesTitle: false },

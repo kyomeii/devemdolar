@@ -6,7 +6,7 @@ All written content in `src/content/` and the illustrations in `src/assets/` and
 
 Você pode copiar, redistribuir, adaptar e usar inclusive comercialmente, desde que:
 
-- **Dê crédito** ("Gringa contributors", com link pro repositório), e
+- **Dê crédito** ("Dev em Dólar contributors", com link pro repositório), e
 - **Compartilhe igual**: se adaptar, publique sob a mesma licença.
 
 Texto completo / Full text: https://creativecommons.org/licenses/by-sa/4.0/legalcode

@@ -1,4 +1,4 @@
-# Gringa
+# Dev em Dólar
 
 **Pare de ganhar em shitcoin.** Guia gratuito, open source e sem papo de coach pra profissional de tecnologia brasileiro trabalhar remoto pra fora, ganhando em dólar ou euro.
 

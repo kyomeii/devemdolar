@@ -94,6 +94,14 @@ You'll do this LinkedIn and Google routine **every day**. On LinkedIn, twice a d
 
 Over there, you leave your search saved and check it every day. When you see a job that fits your profile, you don't just apply: you go to LinkedIn, search for the company's employees, and add them. **Especially the recruiters.**
 
+## Let Claude do the searching
+
+I also left a **Claude Skill** in the repository that does the boring part ([the `skills/vagas-gringa` folder](https://github.com/kyomeii/devemdolar/tree/main/skills/vagas-gringa)). You give it your resume, it builds your profile, asks where you can work from and what kind of contract you want, then goes hunting for remote jobs that accept Brazil/LATAM on company job boards (Greenhouse, Lever, Ashby...) and aggregators.
+
+At the end it gives you a table with a direct link to each job, a fit score, and what was actually verified (it opened the job page, or only saw it on an aggregator). It also keeps a spreadsheet (`vagas_tracker.csv`) so it doesn't show you the same job twice in later runs.
+
+Run it every few days, alongside your LinkedIn and Google routine. It finds the job, but adding the recruiter and sending the application is still on you.
+
 ## Companies that hire Brazilians
 
 At some point I'll add companies to this site that hire Brazilians or Latin Americans remotely, whether they're consulting firms, recruiting agencies, or the company itself. I just have to scrape my emails to find the full list.

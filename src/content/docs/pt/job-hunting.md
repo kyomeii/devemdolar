@@ -94,6 +94,14 @@ Esse processo no LinkedIn e no Google você vai fazer **todo dia**. No LinkedIn,
 
 Lá você vai deixar sua pesquisa salva e olhar todo dia. Quando vir uma vaga que se encaixa no seu perfil, você não vai só se inscrever: vai no LinkedIn, pesquisar funcionários da empresa e adicioná-los. **Principalmente os recrutadores.**
 
+## Deixa o Claude procurar pra você
+
+Também deixei no repositório uma **Skill do Claude** que faz a parte chata ([pasta `skills/vagas-gringa`](https://github.com/kyomeii/devemdolar/tree/main/skills/vagas-gringa)). Você manda seu currículo, ela monta seu perfil, pergunta de onde você pode trabalhar e que tipo de contrato você quer, e sai caçando vaga remota que aceita Brasil/LATAM nos quadros das empresas (Greenhouse, Lever, Ashby...) e nos agregadores.
+
+No fim, ela entrega uma tabela com link direto pra cada vaga, uma nota de fit, e o que foi verificado de verdade (abriu a página da vaga ou só viu no agregador). Também mantém uma planilha (`vagas_tracker.csv`) pra não te mostrar a mesma vaga duas vezes nas próximas rodadas.
+
+Rode a cada poucos dias, junto com a rotina de LinkedIn e Google. Ela acha a vaga, mas quem adiciona o recrutador e manda a aplicação continua sendo você.
+
 ## Empresas que contratam brasileiros
 
 Futuramente vou adicionar nesse site empresas que contratam brasileiros ou latinos remotamente, sejam elas consultorias, agências de recrutamento ou a própria empresa. Só tenho que fazer um scrape nos meus e-mails pra achar a lista extensiva.

@@ -23,7 +23,10 @@
 
 As versões em espanhol e inglês ficam em `src/content/docs/es/` e `src/content/docs/en/`, com os mesmos nomes de arquivo.
 
-Tem também uma **Skill do Claude** pra montar currículo no padrão gringo em [`skills/curriculo-gringa`](skills/curriculo-gringa).
+Tem também duas **Skills do Claude**:
+
+- [`skills/curriculo-gringa`](skills/curriculo-gringa): monta seu currículo no padrão gringo e gera o PDF.
+- [`skills/vagas-gringa`](skills/vagas-gringa): lê seu currículo e procura vagas remotas que aceitam Brasil/LATAM.
 
 ## Contribuir
 

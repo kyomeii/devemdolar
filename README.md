@@ -1,5 +1,7 @@
 # Dev em Dólar
 
+### 👉 [devemdolar.kyomei02.workers.dev](https://devemdolar.kyomei02.workers.dev)
+
 **Pare de ganhar em shitcoin.** Guia gratuito, open source e sem papo de coach pra profissional de tecnologia brasileiro trabalhar remoto pra fora, ganhando em dólar ou euro.
 
 🇧🇷 Português · 🇪🇸 Español · 🇺🇸 English

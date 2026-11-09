@@ -102,6 +102,20 @@ No fim, ela entrega uma tabela com link direto pra cada vaga, uma nota de fit, e
 
 Rode a cada poucos dias, junto com a rotina de LinkedIn e Google. Ela acha a vaga, mas quem adiciona o recrutador e manda a aplicação continua sendo você.
 
+### Como usar
+
+1. **Instale a skill.** No Claude.ai: baixe a pasta `skills/vagas-gringa` do repositório, compacte em `.zip` e suba em *Settings → Capabilities → Skills*. No Claude Code: copie a pasta pra `~/.claude/skills/vagas-gringa/`.
+2. **Abra uma conversa nova, anexe seu currículo** e diga algo como: *"procura vagas remotas pra mim na gringa"*.
+3. **Confirme o perfil.** Ela resume o que entendeu do seu currículo (cargo, senioridade, stack). Corrija se estiver errado, porque é isso que ela vai usar pra buscar.
+4. **Responda as perguntas.** De onde você pode trabalhar, que contrato aceita (PJ em dólar, EOR...), se quer só seu cargo atual ou também um passo ao lado, e empresas pra pular (onde você já aplicou).
+5. **Espere a busca.** Ela abre as páginas das vagas uma por uma, então demora uns minutos.
+6. **Leia a tabela de cima pra baixo.** As de fit 4 e 5 são as que valem aplicar primeiro. Olhe a coluna de verificação: "só agregador" pode estar fechada ou duplicada.
+7. **Baixe o `vagas_tracker.csv`** que ela entrega no final e guarde.
+
+**Nas próximas rodadas**, anexe o `vagas_tracker.csv` da rodada anterior junto com o currículo. Assim ela só traz vaga nova e reconfere se as melhores antigas ainda estão abertas. Uma rodada a cada 3 ou 4 dias é o suficiente.
+
+Achou uma vaga boa? Aí volta pro roteiro do HiringCafe: aplica, e vai no LinkedIn adicionar os funcionários e recrutadores da empresa.
+
 ## Empresas que contratam brasileiros
 
 Futuramente vou adicionar nesse site empresas que contratam brasileiros ou latinos remotamente, sejam elas consultorias, agências de recrutamento ou a própria empresa. Só tenho que fazer um scrape nos meus e-mails pra achar a lista extensiva.

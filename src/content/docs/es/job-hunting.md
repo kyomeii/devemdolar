@@ -102,6 +102,20 @@ Al final te entrega una tabla con link directo a cada vacante, una nota de fit, 
 
 Córrela cada pocos días, junto con la rutina de LinkedIn y Google. Ella encuentra la vacante, pero quien agrega al reclutador y manda la aplicación sigues siendo tú.
 
+### Cómo usarla
+
+1. **Instala la skill.** En Claude.ai: descarga la carpeta `skills/vagas-gringa` del repositorio, comprímela en `.zip` y súbela en *Settings → Capabilities → Skills*. En Claude Code: copia la carpeta a `~/.claude/skills/vagas-gringa/`.
+2. **Abre una conversación nueva, adjunta tu currículum** y dile algo como: *"búscame vacantes remotas en el extranjero"*.
+3. **Confirma el perfil.** Resume lo que entendió de tu currículum (puesto, seniority, stack). Corrígelo si está mal, porque eso es lo que va a usar para buscar.
+4. **Responde las preguntas.** Desde dónde puedes trabajar, qué contrato aceptas (contractor en dólares, EOR...), si quieres solo tu puesto actual o también uno al lado, y empresas que saltar (donde ya aplicaste).
+5. **Espera la búsqueda.** Abre las páginas de las vacantes una por una, así que tarda unos minutos.
+6. **Lee la tabla de arriba hacia abajo.** Las de fit 4 y 5 son las que vale la pena aplicar primero. Mira la columna de verificación: "solo agregador" puede estar cerrada o duplicada.
+7. **Descarga el `vagas_tracker.csv`** que te entrega al final y guárdalo.
+
+**En las siguientes rondas**, adjunta el `vagas_tracker.csv` de la ronda anterior junto con el currículum. Así solo trae vacantes nuevas y revisa si las mejores antiguas siguen abiertas. Una ronda cada 3 o 4 días es suficiente.
+
+¿Encontraste una buena? Vuelve a la rutina de HiringCafe: aplica, y ve a LinkedIn a agregar a los empleados y reclutadores de la empresa.
+
 ## Empresas que contratan latinos
 
 Más adelante voy a agregar a este sitio empresas que contratan brasileños o latinos de forma remota, ya sean consultoras, agencias de reclutamiento o la propia empresa. Nomás tengo que hacerle scrape a mis e-mails para sacar la lista completa.

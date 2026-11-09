@@ -102,6 +102,20 @@ At the end it gives you a table with a direct link to each job, a fit score, and
 
 Run it every few days, alongside your LinkedIn and Google routine. It finds the job, but adding the recruiter and sending the application is still on you.
 
+### How to use it
+
+1. **Install the skill.** On Claude.ai: download the `skills/vagas-gringa` folder from the repository, zip it, and upload it under *Settings → Capabilities → Skills*. On Claude Code: copy the folder to `~/.claude/skills/vagas-gringa/`.
+2. **Open a new chat, attach your resume**, and say something like: *"find me remote jobs abroad"*.
+3. **Confirm your profile.** It summarizes what it understood from your resume (title, seniority, stack). Fix anything wrong, because that's what it searches with.
+4. **Answer the questions.** Where you can work from, which contracts you accept (USD contractor, EOR...), whether you want only your current role or an adjacent one too, and companies to skip (where you've already applied).
+5. **Wait for the search.** It opens the job pages one by one, so it takes a few minutes.
+6. **Read the table top to bottom.** Fit 4 and 5 are the ones worth applying to first. Check the verification column: "aggregator only" may be closed or a duplicate.
+7. **Download the `vagas_tracker.csv`** it gives you at the end and keep it.
+
+**On later runs**, attach the previous `vagas_tracker.csv` along with your resume. That way it only brings new jobs and re-checks whether the best old ones are still open. One run every 3 or 4 days is plenty.
+
+Found a good one? Back to the HiringCafe routine: apply, then go to LinkedIn and add the company's employees and recruiters.
+
 ## Companies that hire Brazilians
 
 At some point I'll add companies to this site that hire Brazilians or Latin Americans remotely, whether they're consulting firms, recruiting agencies, or the company itself. I just have to scrape my emails to find the full list.
